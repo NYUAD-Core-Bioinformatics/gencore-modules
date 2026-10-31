@@ -179,13 +179,13 @@ MAIL_PASSWORD=application-specific-password
 MAIL_DEFAULT_SENDER=service-account@nyu.edu
 MAIL_SENDER_NAME=Gencore Module Notification
 
-ADMIN_EMAIL=primary-admin@nyu.edu
-ADMIN_CC_EMAILS=second-admin@nyu.edu,third-admin@nyu.edu
+SUPPORT_EMAIL=nyuad.cgsb.cb@nyu.edu
 ```
 
-`ADMIN_CC_EMAILS` is optional and accepts comma-separated plain email
-addresses. For Google SMTP, use an application password or an authentication
-method approved by the institution; do not use a normal interactive password.
+`SUPPORT_EMAIL` receives administrator notifications and is also shown to
+requesters in notification messages. For Google SMTP, use an application
+password or an authentication method approved by the institution; do not use a
+normal interactive password.
 
 ### PostgreSQL, Redis, and Celery
 

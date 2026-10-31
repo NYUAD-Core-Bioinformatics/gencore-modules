@@ -42,14 +42,6 @@ def required_env(name):
     return value
 
 
-def env_email_list(name):
-    return [
-        email.strip()
-        for email in os.getenv(name, '').split(',')
-        if email.strip()
-    ]
-
-
 app.config['MAIL_SERVER'] = required_env('MAIL_SERVER')
 app.config['MAIL_PORT'] = int(required_env('MAIL_PORT'))
 app.config['MAIL_USE_TLS'] = env_flag('MAIL_USE_TLS', True)
@@ -58,8 +50,7 @@ app.config['MAIL_USERNAME'] = required_env('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = required_env('MAIL_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = required_env('MAIL_DEFAULT_SENDER')
 app.config['MAIL_SENDER_NAME'] = required_env('MAIL_SENDER_NAME')
-app.config['ADMIN_EMAIL'] = required_env('ADMIN_EMAIL')
-app.config['ADMIN_CC_EMAILS'] = env_email_list('ADMIN_CC_EMAILS')
+app.config['SUPPORT_EMAIL'] = required_env('SUPPORT_EMAIL')
 
 if app.config['MAIL_USE_TLS'] and app.config['MAIL_USE_SSL']:
     raise RuntimeError('MAIL_USE_TLS and MAIL_USE_SSL cannot both be true')

@@ -1,8 +1,5 @@
 name: gencore-modules
 
-x-local-domain: &local-domain
-  - "${APP_DOMAIN:-gencore-modules.abudhabi.nyu.edu}:${APP_SERVER_IP:-10.230.14.42}"
-
 services:
   proxy:
     image: nginx:1.27-alpine

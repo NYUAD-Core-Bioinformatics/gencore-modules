@@ -100,8 +100,7 @@ def send_final_message(
         admin_message = Message(
             subject=subject,
             sender=notification_sender(),
-            recipients=[app.config["ADMIN_EMAIL"]],
-            cc=app.config["ADMIN_CC_EMAILS"],
+            recipients=[app.config["SUPPORT_EMAIL"]],
             body=body,
         )
         with app.app_context():
@@ -164,7 +163,7 @@ We checked the Gencore catalog and the approved Conda channels.
 {explanation} An administrator will review the request and contact you when
 the manual installation has been handled.
 
-Request ID: {request_id}
+Feel free to reach out to {app.config['SUPPORT_EMAIL']} for any queries.
 
 Regards
 NYU Abu Dhabi Core Bioinformatics
@@ -184,8 +183,7 @@ def notify_manual_review_admin(self, request_id: str) -> None:
     message = Message(
         subject=f"Manual Package Installation Required: {package_request.package_name}",
         sender=notification_sender(),
-        recipients=[app.config["ADMIN_EMAIL"]],
-        cc=app.config["ADMIN_CC_EMAILS"],
+        recipients=[app.config["SUPPORT_EMAIL"]],
         reply_to=package_request.requester_email,
     )
     message.body = f"""A package request requires manual administrator review.
@@ -232,6 +230,8 @@ Slurm Job ID     : {package_request.slurm_job_id}
 We will send another email when the installation completes or requires
 administrator attention.
 
+Feel free to reach out to {app.config['SUPPORT_EMAIL']} for any queries.
+
 Regards
 NYU Abu Dhabi Core Bioinformatics
 """,
@@ -258,6 +258,8 @@ Request ID: {request_id}
 
 module load all gencore/3
 module load {package_request.package_name}/{package_request.resolved_version}
+
+Feel free to reach out to {app.config['SUPPORT_EMAIL']} for any queries.
 
 Regards
 NYU Abu Dhabi Core Bioinformatics
