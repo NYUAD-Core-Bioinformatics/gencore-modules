@@ -6,6 +6,9 @@ builds. Requests for packages available in Bioconda or conda-forge can be
 validated, submitted to Slurm, monitored, published to the catalog, and
 reported to the requester without blocking the web request.
 
+- **Project:** <https://github.com/NYUAD-Core-Bioinformatics/gencore-modules>
+- **Questions and support:** <https://github.com/NYUAD-Core-Bioinformatics/gencore-modules/issues>
+
 ## Contents
 
 - [Architecture](#architecture)
