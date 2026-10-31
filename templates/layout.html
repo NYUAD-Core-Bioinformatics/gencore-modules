@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111b36">
+  <meta name="description" content="Discover and request research software modules for NYU Abu Dhabi HPC.">
+  <title>{% block title %}Gencore Modules{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" sizes="any">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="{{ url_for('index') }}" aria-label="Gencore Modules home">
+        <img class="brand-mark" src="{{ url_for('static', filename='images/favicon.ico') }}" width="36" height="36" alt="">
+        <span class="brand-copy"><strong>Gencore</strong><small>HPC modules</small></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a class="{{ 'is-active' if request.endpoint == 'index' else '' }}" href="{{ url_for('index') }}">Overview</a>
+        <a class="{{ 'is-active' if request.endpoint in ['browse_packages', 'package_detail'] else '' }}" href="{{ url_for('browse_packages') }}">Module catalog</a>
+        <a class="button button--header {{ 'is-active' if request.endpoint == 'howto' else '' }}" href="{{ url_for('howto') }}">Request software</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <a class="brand brand--footer" href="{{ url_for('index') }}">
+          <img class="brand-mark" src="{{ url_for('static', filename='images/favicon.ico') }}" width="36" height="36" alt="">
+          <span class="brand-copy"><strong>Gencore</strong><small>HPC modules</small></span>
+        </a>
+        <p>Research software, packaged for reproducible science on Jubail.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://crc-docs.abudhabi.nyu.edu/" rel="noopener">CRC documentation</a>
+        <a href="https://github.com/NYUAD-Core-Bioinformatics/" rel="noopener">Core Bioinformatics GitHub</a>
+        <a href="mailto:nyuad.cgsb.cb@nyu.edu">Contact the team</a>
+      </div>
+      <p class="footer-meta">© 2026 NYU Abu Dhabi<br>Core Bioinformatics</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navigation = document.querySelector('.primary-nav');
+    if (toggle && navigation) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        navigation.classList.toggle('is-open', !open);
+      });
+    }
+  </script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

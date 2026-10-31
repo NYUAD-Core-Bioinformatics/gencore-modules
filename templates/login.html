@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br>
+<h3>Login</h3>
+<br>
+<p>Please enter your admin credentials to access the gencore module submission page.</p>
+
+{% if error_message %}
+    <div class="alert alert-danger">
+        {{ error_message }}
+    </div>
+{% endif %}
+<form method="POST">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+
+{% endblock %}

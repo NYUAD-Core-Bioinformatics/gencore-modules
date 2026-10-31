@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Package not found · Gencore Modules{% endblock %}
+
+{% block content %}
+<section class="empty-state empty-state--page">
+  <span class="eyebrow">404 · Not found</span>
+  <h1>We couldn't find that module.</h1>
+  <p>The package may have moved or is no longer part of the current Gencore catalog.</p>
+  <a class="button button--primary" href="{{ url_for('browse_packages') }}">Browse all modules</a>
+</section>
+{% endblock %}

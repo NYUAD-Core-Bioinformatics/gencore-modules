@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h3>Submission Status</h3>
+
+<p><strong>Package Name:</strong> {{ data.name }}</p>
+<p><strong>Package Version:</strong> {{ data.version }}</p>
+<p><strong>Channel Name:</strong> {{ data.channelname }}</p>
+<p><strong>Email Address:</strong> {{ data.email }}</p>
+<br>
+
+<h4>Command Execution Result:</h4>
+<pre>{{ result }}</pre> 
+{% endblock %}

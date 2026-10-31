@@ -1,0 +1,196 @@
+name: gencore-modules
+
+x-local-domain: &local-domain
+  - "${APP_DOMAIN:-gencore-modules.abudhabi.nyu.edu}:${APP_SERVER_IP:-10.230.14.42}"
+
+services:
+  proxy:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    depends_on:
+      oauth2-proxy:
+        condition: service_started
+    environment:
+      TZ: ${TZ:-Asia/Dubai}
+    extra_hosts: *local-domain
+    networks:
+      - edge
+    ports:
+      - "${HTTPS_PORT:-443}:443"
+    volumes:
+      - ./nginx/gencore.conf:/etc/nginx/conf.d/default.conf:ro,Z
+      - ${TLS_CERT_ON_HOST:-./secrets/gencore-modules.crt}:/etc/nginx/tls/tls.crt:ro,Z
+      - ${TLS_KEY_ON_HOST:-./secrets/gencore-modules.key}:/etc/nginx/tls/tls.key:ro,Z
+      - /usr/share/zoneinfo/${TZ:-Asia/Dubai}:/etc/localtime:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-check-certificate -qO- https://127.0.0.1/ready >/dev/null"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  oauth2-proxy:
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.15.5
+    restart: unless-stopped
+    command:
+      - --config=/etc/oauth2-proxy/oauth2-proxy.cfg
+    depends_on:
+      web:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      TZ: ${TZ:-Asia/Dubai}
+    networks:
+      - edge
+      - default
+    volumes:
+      - ./conf/oauth2-proxy.cfg:/etc/oauth2-proxy/oauth2-proxy.cfg:ro,Z
+      - ${OAUTH2_CLIENT_SECRET_ON_HOST:-./secrets/entra_client_secret}:/run/secrets/entra_client_secret:ro,Z
+      - ${OAUTH2_COOKIE_SECRET_ON_HOST:-./secrets/oauth2_cookie_secret}:/run/secrets/oauth2_cookie_secret:ro,Z
+      - /usr/share/zoneinfo/${TZ:-Asia/Dubai}:/etc/localtime:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gencore-modules-gui:${IMAGE_TAG:-local}
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      TZ: ${TZ:-Asia/Dubai}
+      GUNICORN_CMD_ARGS: >-
+        --bind=0.0.0.0:8000
+        --workers=${WEB_WORKERS:-2}
+        --threads=${WEB_THREADS:-4}
+        --timeout=60
+        --access-logfile=-
+        --error-logfile=-
+    extra_hosts: *local-domain
+    networks:
+      - default
+      - edge
+    expose:
+      - "8000"
+    volumes:
+      - ./catalog:/app/catalog:ro,z
+      - /usr/share/zoneinfo/${TZ:-Asia/Dubai}:/etc/localtime:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  worker:
+    image: gencore-modules-gui:${IMAGE_TAG:-local}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A tasks:celery worker --loglevel=INFO --concurrency=${CELERY_CONCURRENCY:-2}
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      TZ: ${TZ:-Asia/Dubai}
+    extra_hosts: *local-domain
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./catalog:/app/catalog:rw,z
+      - ${HPC_SSH_KEY_ON_HOST:-./secrets/hpc_ssh_key}:/run/secrets/hpc_ssh_key:ro,Z
+      - /usr/share/zoneinfo/${TZ:-Asia/Dubai}:/etc/localtime:ro
+    healthcheck:
+      test: ["CMD-SHELL", "celery -A tasks:celery inspect ping -d celery@$$HOSTNAME --timeout=5 | grep -q pong"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ:-Asia/Dubai}
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - redis_data:/data
+      - /usr/share/zoneinfo/${TZ:-Asia/Dubai}:/etc/localtime:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    command:
+      - postgres
+      - -c
+      - timezone=${TZ:-Asia/Dubai}
+      - -c
+      - log_timezone=${TZ:-Asia/Dubai}
+    environment:
+      TZ: ${TZ:-Asia/Dubai}
+      POSTGRES_DB: ${POSTGRES_DB:-gencore_modules}
+      POSTGRES_USER: ${POSTGRES_USER:-gencore_modules}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - /usr/share/zoneinfo/${TZ:-Asia/Dubai}:/etc/localtime:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  redis_data:
+  postgres_data:
+
+networks:
+  edge:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: ${EDGE_NETWORK_SUBNET:-172.30.42.0/24}

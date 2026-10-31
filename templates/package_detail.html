@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ package.name }} {{ package.version }} · Gencore Modules{% endblock %}
+
+{% block content %}
+<section class="detail-section">
+  <div class="shell detail-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="{{ url_for('browse_packages') }}">Module catalog</a><span>/</span><span>{{ package.name }}</span>
+    </nav>
+
+    {% if request.args.get('already_available') == '1' %}
+      <div class="availability-banner" role="status">
+        <span aria-hidden="true">✓</span>
+        <div><strong>This module is already available.</strong><p>No new installation request was created. Copy the commands below to load it on Jubail.</p></div>
+      </div>
+    {% endif %}
+
+    <div class="detail-grid">
+      <article class="detail-card">
+        <div class="detail-title">
+          <span class="package-avatar package-avatar--large">{{ package.name[0]|upper }}</span>
+          <div><span class="eyebrow">Gencore {{ package.master_version }} module</span><h1>{{ package.name }}</h1></div>
+        </div>
+        <div class="detail-meta">
+          <div><small>Version</small><strong>{{ package.version }}</strong></div>
+          <div><small>Full module name</small><strong>{{ package.full_version }}</strong></div>
+          <div><small>Platform</small><strong>Jubail HPC</strong></div>
+        </div>
+      </article>
+
+      <aside class="support-card">
+        <span class="support-icon" aria-hidden="true">?</span>
+        <h2>Need help?</h2>
+        <p>See the CRC documentation for module basics or contact Core Bioinformatics.</p>
+        <a class="text-link" href="https://crc-docs.abudhabi.nyu.edu/" rel="noopener">Open CRC documentation →</a>
+      </aside>
+    </div>
+
+    <section class="command-card">
+      <div class="command-heading">
+        <div><span class="eyebrow">Quick start</span><h2>Load this module on Jubail</h2></div>
+        <button class="copy-button" type="button" data-copy-target="module-command"><span aria-hidden="true">▣</span> Copy commands</button>
+      </div>
+      <pre id="module-command"><code><span data-command>module load all gencore/{{ package.master_version }}</span>
+<span data-command>module load {{ package.full_version }}</span></code></pre>
+      <p class="command-note"><span aria-hidden="true">i</span> Run these commands from a Jubail login or compute node.</p>
+    </section>
+
+    <a class="back-link" href="{{ url_for('browse_packages') }}"><span aria-hidden="true">←</span> Back to module catalog</a>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const copyButton = document.querySelector('[data-copy-target]');
+
+  function copyWithTextarea(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    const copied = document.execCommand('copy');
+    textarea.remove();
+    if (!copied) {
+      throw new Error('The browser rejected the copy command.');
+    }
+  }
+
+  if (copyButton) {
+    copyButton.addEventListener('click', async () => {
+      const target = document.getElementById(copyButton.dataset.copyTarget);
+      const commands = Array.from(target.querySelectorAll('[data-command]'))
+        .map((element) => element.textContent.trim())
+        .join('\n');
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(commands);
+        } else {
+          copyWithTextarea(commands);
+        }
+        copyButton.textContent = '✓ Copied';
+        setTimeout(() => copyButton.textContent = '▣ Copy commands', 1800);
+      } catch (error) {
+        copyButton.textContent = 'Copy failed — select commands';
+        target.focus();
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(target);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        setTimeout(() => copyButton.textContent = '▣ Copy commands', 2500);
+      }
+    });
+  }
+</script>
+{% endblock %}

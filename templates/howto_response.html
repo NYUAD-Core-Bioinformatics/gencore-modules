@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}Request received · Gencore Modules{% endblock %}
+
+{% block content %}
+<section class="response-section">
+  <div class="response-card">
+    <div class="success-mark" aria-hidden="true">✓</div>
+    <span class="eyebrow">Request received</span>
+    <h1>Thanks — we'll take it from here.</h1>
+    <p>{{ message or 'Your software request has been recorded. We will email you as it moves through validation and installation.' }}</p>
+    {% if request_id %}
+      <p class="request-reference">Request reference: <a href="{{ url_for('request_status', request_id=request_id) }}"><code>{{ request_id }}</code></a></p>
+    {% endif %}
+    <div class="response-steps">
+      <div class="is-current"><span>1</span><small>Submitted</small></div>
+      <div><span>2</span><small>Validation</small></div>
+      <div><span>3</span><small>Build</small></div>
+      <div><span>4</span><small>Ready</small></div>
+    </div>
+    <div class="response-note"><strong>Validation in progress</strong><p>If the module is already available, this page will take you directly to its loading instructions. Otherwise, we will email you with the next step.</p></div>
+    <div class="response-actions">
+      <a class="button button--primary" href="{{ url_for('browse_packages') }}">Browse modules</a>
+      <a class="button button--secondary" href="{{ url_for('index') }}">Return home</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+{% if request_id %}
+<script>
+  const requestStatusUrl = {{ url_for('request_status', request_id=request_id)|tojson }};
+
+  async function followAvailablePackage() {
+    try {
+      const response = await fetch(requestStatusUrl, {
+        headers: { 'Accept': 'application/json' },
+        cache: 'no-store'
+      });
+      if (response.ok) {
+        const status = await response.json();
+        if (status.redirect_url) {
+          window.location.replace(status.redirect_url);
+          return;
+        }
+        if (['MANUAL_REVIEW', 'COMPLETED', 'FAILED'].includes(status.status)) {
+          return;
+        }
+      }
+    } catch (_) {
+      // A temporary web/network failure should not interrupt the request.
+    }
+    window.setTimeout(followAvailablePackage, 2000);
+  }
+
+  window.setTimeout(followAvailablePackage, 1000);
+</script>
+{% endif %}
+{% endblock %}

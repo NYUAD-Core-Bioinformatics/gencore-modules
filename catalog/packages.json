@@ -1,0 +1,4304 @@
+[
+{
+  "name": "gencore_rad",
+  "version": "1.0",
+  "full_version": "gencore_rad/1.0",
+  "master_version": "1"
+},
+{
+  "name": "deeptools",
+  "version": "3.3.1",
+  "full_version": "deeptools/3.3.1",
+  "master_version": "1"
+},
+{
+  "name": "gencore_metagenomics_dev",
+  "version": "1.0",
+  "full_version": "gencore_metagenomics_dev/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_de_novo_transcriptome",
+  "version": "1.0",
+  "full_version": "gencore_de_novo_transcriptome/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_soapdenovo2",
+  "version": "1.0",
+  "full_version": "gencore_soapdenovo2/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_metagenomics",
+  "version": "1.0",
+  "full_version": "gencore_metagenomics/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_de_novo_genomic",
+  "version": "1.0",
+  "full_version": "gencore_de_novo_genomic/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_de_novo_metagenomic",
+  "version": "1.0",
+  "full_version": "gencore_de_novo_metagenomic/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_kraken",
+  "version": "1.0",
+  "full_version": "gencore_kraken/1.0",
+  "master_version": "1"
+},
+{
+  "name": "Miniconda3",
+  "version": "4.7.10",
+  "full_version": "Miniconda3/4.7.10",
+  "master_version": "1"
+},
+{
+  "name": "qualimap",
+  "version": "2.2.2c",
+  "full_version": "qualimap/2.2.2c",
+  "master_version": "1"
+},
+{
+  "name": "gencore_evonet",
+  "version": "1.0",
+  "full_version": "gencore_evonet/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_nvim",
+  "version": "1.0",
+  "full_version": "gencore_nvim/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_biosails",
+  "version": "1.0-0",
+  "full_version": "gencore_biosails/1.0-0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_build",
+  "version": "1.0",
+  "full_version": "gencore_build/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_rad_ddocent",
+  "version": "1.0",
+  "full_version": "gencore_rad_ddocent/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_anaconda2",
+  "version": "4.2.0",
+  "full_version": "gencore_anaconda2/4.2.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_anaconda2",
+  "version": "4.3.0",
+  "full_version": "gencore_anaconda2/4.3.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_tuxedo",
+  "version": "1.0",
+  "full_version": "gencore_tuxedo/1.0",
+  "master_version": "1"
+},
+{
+  "name": "diamond",
+  "version": "0.9.26",
+  "full_version": "diamond/0.9.26",
+  "master_version": "1"
+},
+{
+  "name": "multiqc",
+  "version": "1.7",
+  "full_version": "multiqc/1.7",
+  "master_version": "1"
+},
+{
+  "name": "EasyBuild",
+  "version": "2.8.2",
+  "full_version": "EasyBuild/2.8.2",
+  "master_version": "1"
+},
+{
+  "name": "EasyBuild",
+  "version": "3.1.0",
+  "full_version": "EasyBuild/3.1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_qc",
+  "version": "2.0",
+  "full_version": "gencore_qc/2.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_qc",
+  "version": "1.0",
+  "full_version": "gencore_qc/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_dev",
+  "version": "1.0",
+  "full_version": "gencore_dev/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_variant_detection",
+  "version": "1.0",
+  "full_version": "gencore_variant_detection/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_malaria",
+  "version": "1.0",
+  "full_version": "gencore_malaria/1.0",
+  "master_version": "1"
+},
+{
+  "name": "fastp",
+  "version": "0.20.0",
+  "full_version": "fastp/0.20.0",
+  "master_version": "1"
+},
+{
+  "name": "fastqc",
+  "version": "0.11.8",
+  "full_version": "fastqc/0.11.8",
+  "master_version": "1"
+},
+{
+  "name": "gencore_rnaseq",
+  "version": "1.0",
+  "full_version": "gencore_rnaseq/1.0",
+  "master_version": "1"
+},
+{
+  "name": "trimmomatic",
+  "version": "0.39",
+  "full_version": "trimmomatic/0.39",
+  "master_version": "1"
+},
+{
+  "name": "gencore_annotation",
+  "version": "1.0",
+  "full_version": "gencore_annotation/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_base",
+  "version": "1.0",
+  "full_version": "gencore_base/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_anaconda",
+  "version": "3-4.0.0",
+  "full_version": "gencore_anaconda/3-4.0.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_anaconda",
+  "version": "2-4.0.0",
+  "full_version": "gencore_anaconda/2-4.0.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_trinity",
+  "version": "1.0",
+  "full_version": "gencore_trinity/1.0",
+  "master_version": "1"
+},
+{
+  "name": "gencore_epigenetics",
+  "version": "1.0",
+  "full_version": "gencore_epigenetics/1.0",
+  "master_version": "1"
+},
+{
+  "name": "popgen-entropy",
+  "version": "2.0",
+  "full_version": "popgen-entropy/2.0",
+  "master_version": "2"
+},
+{
+  "name": "vardict-java",
+  "version": "1.8.3",
+  "full_version": "vardict-java/1.8.3",
+  "master_version": "2"
+},
+{
+  "name": "meme",
+  "version": "5.3.0",
+  "full_version": "meme/5.3.0",
+  "master_version": "2"
+},
+{
+  "name": "seqtk",
+  "version": "1.3",
+  "full_version": "seqtk/1.3",
+  "master_version": "2"
+},
+{
+  "name": "deeptools",
+  "version": "3.5.1",
+  "full_version": "deeptools/3.5.1",
+  "master_version": "2"
+},
+{
+  "name": "deeptools",
+  "version": "3.3.1",
+  "full_version": "deeptools/3.3.1",
+  "master_version": "2"
+},
+{
+  "name": "kallisto",
+  "version": "0.46.0",
+  "full_version": "kallisto/0.46.0",
+  "master_version": "2"
+},
+{
+  "name": "kallisto",
+  "version": "0.44.0",
+  "full_version": "kallisto/0.44.0",
+  "master_version": "2"
+},
+{
+  "name": "r-minionqc",
+  "version": "1.4.2",
+  "full_version": "r-minionqc/1.4.2",
+  "master_version": "2"
+},
+{
+  "name": "gcta",
+  "version": "1.93",
+  "full_version": "gcta/1.93",
+  "master_version": "2"
+},
+{
+  "name": "stringtie",
+  "version": "2.0",
+  "full_version": "stringtie/2.0",
+  "master_version": "2"
+},
+{
+  "name": "stringtie",
+  "version": "2.2.1",
+  "full_version": "stringtie/2.2.1",
+  "master_version": "2"
+},
+{
+  "name": "gencore_rnaseq_aligners",
+  "version": "2.0",
+  "full_version": "gencore_rnaseq_aligners/2.0",
+  "master_version": "2"
+},
+{
+  "name": "getorganelle",
+  "version": "1.7.7.0",
+  "full_version": "getorganelle/1.7.7.0",
+  "master_version": "2"
+},
+{
+  "name": "manta",
+  "version": "1.6.0",
+  "full_version": "manta/1.6.0",
+  "master_version": "2"
+},
+{
+  "name": "trinotate",
+  "version": "3.2.0",
+  "full_version": "trinotate/3.2.0",
+  "master_version": "2"
+},
+{
+  "name": "phamb",
+  "version": "1.0.1",
+  "full_version": "phamb/1.0.1",
+  "master_version": "2"
+},
+{
+  "name": "cite-seq-count",
+  "version": "1.4.4",
+  "full_version": "cite-seq-count/1.4.4",
+  "master_version": "2"
+},
+{
+  "name": "trim-galore",
+  "version": "0.6.6",
+  "full_version": "trim-galore/0.6.6",
+  "master_version": "2"
+},
+{
+  "name": "deicode",
+  "version": "0.2.4",
+  "full_version": "deicode/0.2.4",
+  "master_version": "2"
+},
+{
+  "name": "microbeannotator",
+  "version": "2.0.5",
+  "full_version": "microbeannotator/2.0.5",
+  "master_version": "2"
+},
+{
+  "name": "augustus",
+  "version": "3.4.0",
+  "full_version": "augustus/3.4.0",
+  "master_version": "2"
+},
+{
+  "name": "augustus",
+  "version": "3.5.0",
+  "full_version": "augustus/3.5.0",
+  "master_version": "2"
+},
+{
+  "name": "prscs",
+  "version": "1.0.0",
+  "full_version": "prscs/1.0.0",
+  "master_version": "2"
+},
+{
+  "name": "soapdenovo2-gapcloser",
+  "version": "1.12",
+  "full_version": "soapdenovo2-gapcloser/1.12",
+  "master_version": "2"
+},
+{
+  "name": "pindel",
+  "version": "0.2.5b9",
+  "full_version": "pindel/0.2.5b9",
+  "master_version": "2"
+},
+{
+  "name": "structure",
+  "version": "2.3.4",
+  "full_version": "structure/2.3.4",
+  "master_version": "2"
+},
+{
+  "name": "libgd",
+  "version": "2.3.3",
+  "full_version": "libgd/2.3.3",
+  "master_version": "2"
+},
+{
+  "name": "ucsc-axtchain",
+  "version": "377",
+  "full_version": "ucsc-axtchain/377",
+  "master_version": "2"
+},
+{
+  "name": "snakemake",
+  "version": "7.19.1",
+  "full_version": "snakemake/7.19.1",
+  "master_version": "2"
+},
+{
+  "name": "spoa",
+  "version": "4.1.3",
+  "full_version": "spoa/4.1.3",
+  "master_version": "2"
+},
+{
+  "name": "texlive-core",
+  "version": "20230313",
+  "full_version": "texlive-core/20230313",
+  "master_version": "2"
+},
+{
+  "name": "pheniqs",
+  "version": "201807261425",
+  "full_version": "pheniqs/201807261425",
+  "master_version": "2"
+},
+{
+  "name": "Miniconda3",
+  "version": "4.7.10",
+  "full_version": "Miniconda3/4.7.10",
+  "master_version": "2"
+},
+{
+  "name": "genomethreader",
+  "version": "1.7.1",
+  "full_version": "genomethreader/1.7.1",
+  "master_version": "2"
+},
+{
+  "name": "qualimap",
+  "version": "2.2.2c",
+  "full_version": "qualimap/2.2.2c",
+  "master_version": "2"
+},
+{
+  "name": "bamtools",
+  "version": "2.5.1",
+  "full_version": "bamtools/2.5.1",
+  "master_version": "2"
+},
+{
+  "name": "repdenovo",
+  "version": "0.0.1",
+  "full_version": "repdenovo/0.0.1",
+  "master_version": "2"
+},
+{
+  "name": "raxml-ng",
+  "version": "1.2.1",
+  "full_version": "raxml-ng/1.2.1",
+  "master_version": "2"
+},
+{
+  "name": "prinseq",
+  "version": "0.20.4",
+  "full_version": "prinseq/0.20.4",
+  "master_version": "2"
+},
+{
+  "name": "sga_ice",
+  "version": "1.01",
+  "full_version": "sga_ice/1.01",
+  "master_version": "2"
+},
+{
+  "name": "cesar",
+  "version": "1.01",
+  "full_version": "cesar/1.01",
+  "master_version": "2"
+},
+{
+  "name": "necat",
+  "version": "0.0.1_update20200803",
+  "full_version": "necat/0.0.1_update20200803",
+  "master_version": "2"
+},
+{
+  "name": "vardict",
+  "version": "2019.06.04",
+  "full_version": "vardict/2019.06.04",
+  "master_version": "2"
+},
+{
+  "name": "bioconductor-idr2d",
+  "version": "1.2.2",
+  "full_version": "bioconductor-idr2d/1.2.2",
+  "master_version": "2"
+},
+{
+  "name": "bioinfokit",
+  "version": "2.0.8",
+  "full_version": "bioinfokit/2.0.8",
+  "master_version": "2"
+},
+{
+  "name": "humann2",
+  "version": "2.8.1",
+  "full_version": "humann2/2.8.1",
+  "master_version": "2"
+},
+{
+  "name": "vcflib",
+  "version": "1.0.0_rc3",
+  "full_version": "vcflib/1.0.0_rc3",
+  "master_version": "2"
+},
+{
+  "name": "snpeff",
+  "version": "5.1",
+  "full_version": "snpeff/5.1",
+  "master_version": "2"
+},
+{
+  "name": "hisat2",
+  "version": "2.2.1",
+  "full_version": "hisat2/2.2.1",
+  "master_version": "2"
+},
+{
+  "name": "mauve",
+  "version": "2.4.0",
+  "full_version": "mauve/2.4.0",
+  "master_version": "2"
+},
+{
+  "name": "rmats",
+  "version": "4.3.0",
+  "full_version": "rmats/4.3.0",
+  "master_version": "2"
+},
+{
+  "name": "rmats",
+  "version": "4.1.2",
+  "full_version": "rmats/4.1.2",
+  "master_version": "2"
+},
+{
+  "name": "vrhyme",
+  "version": "1.1.0",
+  "full_version": "vrhyme/1.1.0",
+  "master_version": "2"
+},
+{
+  "name": "metaplatanus",
+  "version": "1.3.0",
+  "full_version": "metaplatanus/1.3.0",
+  "master_version": "2"
+},
+{
+  "name": "metaplatanus",
+  "version": "1.3.1",
+  "full_version": "metaplatanus/1.3.1",
+  "master_version": "2"
+},
+{
+  "name": "unimap",
+  "version": "0.1",
+  "full_version": "unimap/0.1",
+  "master_version": "2"
+},
+{
+  "name": "pblat",
+  "version": "2.5.1",
+  "full_version": "pblat/2.5.1",
+  "master_version": "2"
+},
+{
+  "name": "cudatoolkit",
+  "version": "11.8.0",
+  "full_version": "cudatoolkit/11.8.0",
+  "master_version": "2"
+},
+{
+  "name": "ucsc-liftover",
+  "version": "377",
+  "full_version": "ucsc-liftover/377",
+  "master_version": "2"
+},
+{
+  "name": "exonerate",
+  "version": "2.4.0",
+  "full_version": "exonerate/2.4.0",
+  "master_version": "2"
+},
+{
+  "name": "haslr",
+  "version": "0.8a1",
+  "full_version": "haslr/0.8a1",
+  "master_version": "2"
+},
+{
+  "name": "smoove",
+  "version": "0.2.7",
+  "full_version": "smoove/0.2.7",
+  "master_version": "2"
+},
+{
+  "name": "bcftools",
+  "version": "1.9",
+  "full_version": "bcftools/1.9",
+  "master_version": "2"
+},
+{
+  "name": "bcftools",
+  "version": "1.3.1",
+  "full_version": "bcftools/1.3.1",
+  "master_version": "2"
+},
+{
+  "name": "circos",
+  "version": "0.69.8",
+  "full_version": "circos/0.69.8",
+  "master_version": "2"
+},
+{
+  "name": "gerp",
+  "version": "2.1",
+  "full_version": "gerp/2.1",
+  "master_version": "2"
+},
+{
+  "name": "ucsc-chainnet",
+  "version": "377",
+  "full_version": "ucsc-chainnet/377",
+  "master_version": "2"
+},
+{
+  "name": "spades",
+  "version": "4.0.0",
+  "full_version": "spades/4.0.0",
+  "master_version": "2"
+},
+{
+  "name": "spades",
+  "version": "3.15.5",
+  "full_version": "spades/3.15.5",
+  "master_version": "2"
+},
+{
+  "name": "spades",
+  "version": "3.15.4",
+  "full_version": "spades/3.15.4",
+  "master_version": "2"
+},
+{
+  "name": "spades",
+  "version": "3.14.1",
+  "full_version": "spades/3.14.1",
+  "master_version": "2"
+},
+{
+  "name": "spades",
+  "version": "3.15.3",
+  "full_version": "spades/3.15.3",
+  "master_version": "2"
+},
+{
+  "name": "kraken2",
+  "version": "2.1.2",
+  "full_version": "kraken2/2.1.2",
+  "master_version": "2"
+},
+{
+  "name": "seq2c",
+  "version": "2019.05.30",
+  "full_version": "seq2c/2019.05.30",
+  "master_version": "2"
+},
+{
+  "name": "bioconductor-exomecopy",
+  "version": "1.40.0",
+  "full_version": "bioconductor-exomecopy/1.40.0",
+  "master_version": "2"
+},
+{
+  "name": "ngmerge",
+  "version": "0.3",
+  "full_version": "ngmerge/0.3",
+  "master_version": "2"
+},
+{
+  "name": "homer",
+  "version": "4.10",
+  "full_version": "homer/4.10",
+  "master_version": "2"
+},
+{
+  "name": "ncbi-datasets-cli",
+  "version": "14.12.0",
+  "full_version": "ncbi-datasets-cli/14.12.0",
+  "master_version": "2"
+},
+{
+  "name": "tepeaks",
+  "version": "0.1",
+  "full_version": "tepeaks/0.1",
+  "master_version": "2"
+},
+{
+  "name": "gencore_aligners",
+  "version": "2.0",
+  "full_version": "gencore_aligners/2.0",
+  "master_version": "2"
+},
+{
+  "name": "bioconductor-biobase",
+  "version": "2.44.0",
+  "full_version": "bioconductor-biobase/2.44.0",
+  "master_version": "2"
+},
+{
+  "name": "bioconductor-biobase",
+  "version": "2.48.0",
+  "full_version": "bioconductor-biobase/2.48.0",
+  "master_version": "2"
+},
+{
+  "name": "bioconductor-phyloseq",
+  "version": "1.38.0",
+  "full_version": "bioconductor-phyloseq/1.38.0",
+  "master_version": "2"
+},
+{
+  "name": "kneaddata",
+  "version": "0.10.0",
+  "full_version": "kneaddata/0.10.0",
+  "master_version": "2"
+},
+{
+  "name": "kneaddata",
+  "version": "0.12.0",
+  "full_version": "kneaddata/0.12.0",
+  "master_version": "2"
+},
+{
+  "name": "gatk4",
+  "version": "4.2.6.1",
+  "full_version": "gatk4/4.2.6.1",
+  "master_version": "2"
+},
+{
+  "name": "r-base",
+  "version": "4.2.1",
+  "full_version": "r-base/4.2.1",
+  "master_version": "2"
+},
+{
+  "name": "r-base",
+  "version": "4.2.3",
+  "full_version": "r-base/4.2.3",
+  "master_version": "2"
+},
+{
+  "name": "megahit",
+  "version": "1.2.9",
+  "full_version": "megahit/1.2.9",
+  "master_version": "2"
+},
+{
+  "name": "fastx_toolkit",
+  "version": "0.0.14",
+  "full_version": "fastx_toolkit/0.0.14",
+  "master_version": "2"
+},
+{
+  "name": "gctb",
+  "version": "2.0",
+  "full_version": "gctb/2.0",
+  "master_version": "2"
+},
+{
+  "name": "mmvec",
+  "version": "1.0.5",
+  "full_version": "mmvec/1.0.5",
+  "master_version": "2"
+},
+{
+  "name": "ivar",
+  "version": "1.3",
+  "full_version": "ivar/1.3",
+  "master_version": "2"
+},
+{
+  "name": "gridss",
+  "version": "2.12.0",
+  "full_version": "gridss/2.12.0",
+  "master_version": "2"
+},
+{
+  "name": "quast",
+  "version": "5.0.2",
+  "full_version": "quast/5.0.2",
+  "master_version": "2"
+},
+{
+  "name": "cd-hit",
+  "version": "4.8.1",
+  "full_version": "cd-hit/4.8.1",
+  "master_version": "2"
+},
+{
+  "name": "ucsc-bigwigtobedgraph",
+  "version": "377",
+  "full_version": "ucsc-bigwigtobedgraph/377",
+  "master_version": "2"
+},
+{
+  "name": "metawrap",
+  "version": "1.2.3",
+  "full_version": "metawrap/1.2.3",
+  "master_version": "2"
+},
+{
+  "name": "mitobim",
+  "version": "1.9.1",
+  "full_version": "mitobim/1.9.1",
+  "master_version": "2"
+},
+{
+  "name": "CellRanger",
+  "version": "3.1.0",
+  "full_version": "CellRanger/3.1.0",
+  "master_version": "2"
+},
+{
+  "name": "barrnap",
+  "version": "0.9",
+  "full_version": "barrnap/0.9",
+  "master_version": "2"
+},
+{
+  "name": "idba",
+  "version": "1.1.3",
+  "full_version": "idba/1.1.3",
+  "master_version": "2"
+},
+{
+  "name": "mvicuna",
+  "version": "1.0",
+  "full_version": "mvicuna/1.0",
+  "master_version": "2"
+},
+{
+  "name": "pychopper",
+  "version": "2.5.0",
+  "full_version": "pychopper/2.5.0",
+  "master_version": "2"
+},
+{
+  "name": "minia",
+  "version": "3.2.4",
+  "full_version": "minia/3.2.4",
+  "master_version": "2"
+},
+{
+  "name": "smartdenovo",
+  "version": "1.0.0",
+  "full_version": "smartdenovo/1.0.0",
+  "master_version": "2"
+},
+{
+  "name": "interproscan",
+  "version": "5.55_88.0",
+  "full_version": "interproscan/5.55_88.0",
+  "master_version": "2"
+},
+{
+  "name": "gencore_rnaseq_quant",
+  "version": "2.0",
+  "full_version": "gencore_rnaseq_quant/2.0",
+  "master_version": "2"
+},
+{
+  "name": "bamutil",
+  "version": "1.0.15",
+  "full_version": "bamutil/1.0.15",
+  "master_version": "2"
+},
+{
+  "name": "multiqc",
+  "version": "1.7",
+  "full_version": "multiqc/1.7",
+  "master_version": "2"
+},
+{
+  "name": "multiqc",
+  "version": "1.11",
+  "full_version": "multiqc/1.11",
+  "master_version": "2"
+},
+{
+  "name": "star",
+  "version": "2.7.10b",
+  "full_version": "star/2.7.10b",
+  "master_version": "2"
+},
+{
+  "name": "pear",
+  "version": "0.9.6",
+  "full_version": "pear/0.9.6",
+  "master_version": "2"
+},
+{
+  "name": "phylodm",
+  "version": "2.2.1",
+  "full_version": "phylodm/2.2.1",
+  "master_version": "2"
+},
+{
+  "name": "bedtools",
+  "version": "2.29.0",
+  "full_version": "bedtools/2.29.0",
+  "master_version": "2"
+},
+{
+  "name": "bedtools",
+  "version": "2.31.0",
+  "full_version": "bedtools/2.31.0",
+  "master_version": "2"
+},
+{
+  "name": "genomad",
+  "version": "1.3.3",
+  "full_version": "genomad/1.3.3",
+  "master_version": "2"
+},
+{
+  "name": "EasyBuild",
+  "version": "4.0.0",
+  "full_version": "EasyBuild/4.0.0",
+  "master_version": "2"
+},
+{
+  "name": "nucdiff",
+  "version": "2.0.3",
+  "full_version": "nucdiff/2.0.3",
+  "master_version": "2"
+},
+{
+  "name": "rerconverge",
+  "version": "0.3.0",
+  "full_version": "rerconverge/0.3.0",
+  "master_version": "2"
+},
+{
+  "name": "irep",
+  "version": "1.1.7",
+  "full_version": "irep/1.1.7",
+  "master_version": "2"
+},
+{
+  "name": "genometools",
+  "version": "1.2.1",
+  "full_version": "genometools/1.2.1",
+  "master_version": "2"
+},
+{
+  "name": "jannovar-cli",
+  "version": "0.35",
+  "full_version": "jannovar-cli/0.35",
+  "master_version": "2"
+},
+{
+  "name": "sortmerna",
+  "version": "4.3.6",
+  "full_version": "sortmerna/4.3.6",
+  "master_version": "2"
+},
+{
+  "name": "isoncorrect",
+  "version": "0.1.3.5",
+  "full_version": "isoncorrect/0.1.3.5",
+  "master_version": "2"
+},
+{
+  "name": "gencore_qc",
+  "version": "2.0",
+  "full_version": "gencore_qc/2.0",
+  "master_version": "2"
+},
+{
+  "name": "lofreq",
+  "version": "2.1.5",
+  "full_version": "lofreq/2.1.5",
+  "master_version": "2"
+},
+{
+  "name": "graphlan",
+  "version": "1.1.3",
+  "full_version": "graphlan/1.1.3",
+  "master_version": "2"
+},
+{
+  "name": "bioconductor-deseq2",
+  "version": "1.32.0",
+  "full_version": "bioconductor-deseq2/1.32.0",
+  "master_version": "2"
+},
+{
+  "name": "bracken",
+  "version": "2.6.1",
+  "full_version": "bracken/2.6.1",
+  "master_version": "2"
+},
+{
+  "name": "tbb",
+  "version": "2021.7.0",
+  "full_version": "tbb/2021.7.0",
+  "master_version": "2"
+},
+{
+  "name": "tbb",
+  "version": "2020.2.0",
+  "full_version": "tbb/2020.2.0",
+  "master_version": "2"
+},
+{
+  "name": "mash",
+  "version": "2.3",
+  "full_version": "mash/2.3",
+  "master_version": "2"
+},
+{
+  "name": "snpsift",
+  "version": "4.3.1",
+  "full_version": "snpsift/4.3.1",
+  "master_version": "2"
+},
+{
+  "name": "snpsift",
+  "version": "4.3.1t",
+  "full_version": "snpsift/4.3.1t",
+  "master_version": "2"
+},
+{
+  "name": "perl",
+  "version": "5.26.2",
+  "full_version": "perl/5.26.2",
+  "master_version": "2"
+},
+{
+  "name": "augur",
+  "version": "6.4.3",
+  "full_version": "augur/6.4.3",
+  "master_version": "2"
+},
+{
+  "name": "cufflinks",
+  "version": "2.2.1",
+  "full_version": "cufflinks/2.2.1",
+  "master_version": "2"
+},
+{
+  "name": "braker2",
+  "version": "2.1.6",
+  "full_version": "braker2/2.1.6",
+  "master_version": "2"
+},
+{
+  "name": "macs2",
+  "version": "2.2.7.1",
+  "full_version": "macs2/2.2.7.1",
+  "master_version": "2"
+},
+{
+  "name": "fastani",
+  "version": "1.33",
+  "full_version": "fastani/1.33",
+  "master_version": "2"
+},
+{
+  "name": "mimodd",
+  "version": "0.1.8",
+  "full_version": "mimodd/0.1.8",
+  "master_version": "2"
+},
+{
+  "name": "gs-tama",
+  "version": "1.0.3",
+  "full_version": "gs-tama/1.0.3",
+  "master_version": "2"
+},
+{
+  "name": "gffread",
+  "version": "0.12.1",
+  "full_version": "gffread/0.12.1",
+  "master_version": "2"
+},
+{
+  "name": "figaro",
+  "version": "1.1.2",
+  "full_version": "figaro/1.1.2",
+  "master_version": "2"
+},
+{
+  "name": "blast",
+  "version": "2.9.0",
+  "full_version": "blast/2.9.0",
+  "master_version": "2"
+},
+{
+  "name": "blast",
+  "version": "2.15.0",
+  "full_version": "blast/2.15.0",
+  "master_version": "2"
+},
+{
+  "name": "blast",
+  "version": "2.12.0",
+  "full_version": "blast/2.12.0",
+  "master_version": "2"
+},
+{
+  "name": "flye",
+  "version": "2.9.3",
+  "full_version": "flye/2.9.3",
+  "master_version": "2"
+},
+{
+  "name": "transrate",
+  "version": "1.0.3",
+  "full_version": "transrate/1.0.3",
+  "master_version": "2"
+},
+{
+  "name": "ucsc-bigwigtowig",
+  "version": "377",
+  "full_version": "ucsc-bigwigtowig/377",
+  "master_version": "2"
+},
+{
+  "name": "htslib",
+  "version": "1.20",
+  "full_version": "htslib/1.20",
+  "master_version": "2"
+},
+{
+  "name": "trinity",
+  "version": "2.12.0",
+  "full_version": "trinity/2.12.0",
+  "master_version": "2"
+},
+{
+  "name": "trinity",
+  "version": "2.13.2",
+  "full_version": "trinity/2.13.2",
+  "master_version": "2"
+},
+{
+  "name": "prodigal",
+  "version": "2.6.3",
+  "full_version": "prodigal/2.6.3",
+  "master_version": "2"
+},
+{
+  "name": "lumpy-sv",
+  "version": "0.3.1",
+  "full_version": "lumpy-sv/0.3.1",
+  "master_version": "2"
+},
+{
+  "name": "eggnog-mapper",
+  "version": "2.1.9",
+  "full_version": "eggnog-mapper/2.1.9",
+  "master_version": "2"
+},
+{
+  "name": "forwardgenomics",
+  "version": "1.0",
+  "full_version": "forwardgenomics/1.0",
+  "master_version": "2"
+},
+{
+  "name": "hclust2",
+  "version": "1.0.0",
+  "full_version": "hclust2/1.0.0",
+  "master_version": "2"
+},
+{
+  "name": "delly",
+  "version": "0.8.7",
+  "full_version": "delly/0.8.7",
+  "master_version": "2"
+},
+{
+  "name": "gencore_variant_detection",
+  "version": "2.0",
+  "full_version": "gencore_variant_detection/2.0",
+  "master_version": "2"
+},
+{
+  "name": "samtools",
+  "version": "1.9",
+  "full_version": "samtools/1.9",
+  "master_version": "2"
+},
+{
+  "name": "samtools",
+  "version": "1.10",
+  "full_version": "samtools/1.10",
+  "master_version": "2"
+},
+{
+  "name": "kofamscan",
+  "version": "1.3.0",
+  "full_version": "kofamscan/1.3.0",
+  "master_version": "2"
+},
+{
+  "name": "openjdk",
+  "version": "11.0.1",
+  "full_version": "openjdk/11.0.1",
+  "master_version": "2"
+},
+{
+  "name": "sra-tools",
+  "version": "3.0.0",
+  "full_version": "sra-tools/3.0.0",
+  "master_version": "2"
+},
+{
+  "name": "fastp",
+  "version": "0.20.1",
+  "full_version": "fastp/0.20.1",
+  "master_version": "2"
+},
+{
+  "name": "fastp",
+  "version": "0.20.0",
+  "full_version": "fastp/0.20.0",
+  "master_version": "2"
+},
+{
+  "name": "seqkit",
+  "version": "2.5.1",
+  "full_version": "seqkit/2.5.1",
+  "master_version": "2"
+},
+{
+  "name": "seqkit",
+  "version": "0.15.0",
+  "full_version": "seqkit/0.15.0",
+  "master_version": "2"
+},
+{
+  "name": "ncbi-genome-download",
+  "version": "0.3.1",
+  "full_version": "ncbi-genome-download/0.3.1",
+  "master_version": "2"
+},
+{
+  "name": "gatk",
+  "version": "3.8",
+  "full_version": "gatk/3.8",
+  "master_version": "2"
+},
+{
+  "name": "telescope",
+  "version": "1.0.3",
+  "full_version": "telescope/1.0.3",
+  "master_version": "2"
+},
+{
+  "name": "evidencemodeler",
+  "version": "1.1.1",
+  "full_version": "evidencemodeler/1.1.1",
+  "master_version": "2"
+},
+{
+  "name": "pigz",
+  "version": "2.6",
+  "full_version": "pigz/2.6",
+  "master_version": "2"
+},
+{
+  "name": "jalview",
+  "version": "2.11.2",
+  "full_version": "jalview/2.11.2",
+  "master_version": "2"
+},
+{
+  "name": "khmer",
+  "version": "3.0.0a3",
+  "full_version": "khmer/3.0.0a3",
+  "master_version": "2"
+},
+{
+  "name": "bioawk",
+  "version": "1.0",
+  "full_version": "bioawk/1.0",
+  "master_version": "2"
+},
+{
+  "name": "export2graphlan",
+  "version": "0.22",
+  "full_version": "export2graphlan/0.22",
+  "master_version": "2"
+},
+{
+  "name": "raxml",
+  "version": "8.2.12",
+  "full_version": "raxml/8.2.12",
+  "master_version": "2"
+},
+{
+  "name": "bowtie2",
+  "version": "2.4.5",
+  "full_version": "bowtie2/2.4.5",
+  "master_version": "2"
+},
+{
+  "name": "fastqc",
+  "version": "0.11.8",
+  "full_version": "fastqc/0.11.8",
+  "master_version": "2"
+},
+{
+  "name": "fastqc",
+  "version": "0.11.9",
+  "full_version": "fastqc/0.11.9",
+  "master_version": "2"
+},
+{
+  "name": "vamb",
+  "version": "3.0.2",
+  "full_version": "vamb/3.0.2",
+  "master_version": "2"
+},
+{
+  "name": "repeatmodeler",
+  "version": "2.0.3",
+  "full_version": "repeatmodeler/2.0.3",
+  "master_version": "2"
+},
+{
+  "name": "msmc2",
+  "version": "2.1.4",
+  "full_version": "msmc2/2.1.4",
+  "master_version": "2"
+},
+{
+  "name": "raven-assembler",
+  "version": "1.8.3",
+  "full_version": "raven-assembler/1.8.3",
+  "master_version": "2"
+},
+{
+  "name": "rsem",
+  "version": "1.3.3",
+  "full_version": "rsem/1.3.3",
+  "master_version": "2"
+},
+{
+  "name": "snap",
+  "version": "2013_11_29",
+  "full_version": "snap/2013_11_29",
+  "master_version": "2"
+},
+{
+  "name": "miga",
+  "version": "1.0.0",
+  "full_version": "miga/1.0.0",
+  "master_version": "2"
+},
+{
+  "name": "savage",
+  "version": "0.4.2",
+  "full_version": "savage/0.4.2",
+  "master_version": "2"
+},
+{
+  "name": "gget",
+  "version": "0.27.2",
+  "full_version": "gget/0.27.2",
+  "master_version": "2"
+},
+{
+  "name": "dram",
+  "version": "1.3.5",
+  "full_version": "dram/1.3.5",
+  "master_version": "2"
+},
+{
+  "name": "trimmomatic",
+  "version": "0.39",
+  "full_version": "trimmomatic/0.39",
+  "master_version": "2"
+},
+{
+  "name": "masurca",
+  "version": "3.3.7",
+  "full_version": "masurca/3.3.7",
+  "master_version": "2"
+},
+{
+  "name": "masurca",
+  "version": "4.1.0",
+  "full_version": "masurca/4.1.0",
+  "master_version": "2"
+},
+{
+  "name": "imsindel",
+  "version": "1.0.2",
+  "full_version": "imsindel/1.0.2",
+  "master_version": "2"
+},
+{
+  "name": "scte",
+  "version": "1.0.0",
+  "full_version": "scte/1.0.0",
+  "master_version": "2"
+},
+{
+  "name": "rmats2sashimiplot",
+  "version": "2.0.4",
+  "full_version": "rmats2sashimiplot/2.0.4",
+  "master_version": "2"
+},
+{
+  "name": "gatk4-spark",
+  "version": "4.2.6.1",
+  "full_version": "gatk4-spark/4.2.6.1",
+  "master_version": "2"
+},
+{
+  "name": "bismark",
+  "version": "0.23.1",
+  "full_version": "bismark/0.23.1",
+  "master_version": "2"
+},
+{
+  "name": "scipy",
+  "version": "1.14.0",
+  "full_version": "scipy/1.14.0",
+  "master_version": "2"
+},
+{
+  "name": "bcl2fastq2",
+  "version": "2.20.0",
+  "full_version": "bcl2fastq2/2.20.0",
+  "master_version": "2"
+},
+{
+  "name": "transdecoder",
+  "version": "5.5.0",
+  "full_version": "transdecoder/5.5.0",
+  "master_version": "2"
+},
+{
+  "name": "perl-xml-simple",
+  "version": "2.25",
+  "full_version": "perl-xml-simple/2.25",
+  "master_version": "2"
+},
+{
+  "name": "htseq",
+  "version": "0.11.2",
+  "full_version": "htseq/0.11.2",
+  "master_version": "2"
+},
+{
+  "name": "gsalign",
+  "version": "1.0.22",
+  "full_version": "gsalign/1.0.22",
+  "master_version": "2"
+},
+{
+  "name": "songbird",
+  "version": "1.0.3",
+  "full_version": "songbird/1.0.3",
+  "master_version": "2"
+},
+{
+  "name": "joblib",
+  "version": "1.2.0",
+  "full_version": "joblib/1.2.0",
+  "master_version": "2"
+},
+{
+  "name": "suppa",
+  "version": "2.3",
+  "full_version": "suppa/2.3",
+  "master_version": "2"
+},
+{
+  "name": "libiconv",
+  "version": "1.17",
+  "full_version": "libiconv/1.17",
+  "master_version": "2"
+},
+{
+  "name": "salmon",
+  "version": "0.10.2",
+  "full_version": "salmon/0.10.2",
+  "master_version": "2"
+},
+{
+  "name": "glimmerhmm",
+  "version": "3.0.4",
+  "full_version": "glimmerhmm/3.0.4",
+  "master_version": "2"
+},
+{
+  "name": "pysam",
+  "version": "0.15.3",
+  "full_version": "pysam/0.15.3",
+  "master_version": "2"
+},
+{
+  "name": "pysam",
+  "version": "0.21.0",
+  "full_version": "pysam/0.21.0",
+  "master_version": "2"
+},
+{
+  "name": "blat",
+  "version": "36",
+  "full_version": "blat/36",
+  "master_version": "2"
+},
+{
+  "name": "busco",
+  "version": "5.2.0",
+  "full_version": "busco/5.2.0",
+  "master_version": "2"
+},
+{
+  "name": "busco",
+  "version": "5.4.3",
+  "full_version": "busco/5.4.3",
+  "master_version": "2"
+},
+{
+  "name": "freebayes",
+  "version": "1.3.1",
+  "full_version": "freebayes/1.3.1",
+  "master_version": "2"
+},
+{
+  "name": "coverm",
+  "version": "0.7.0",
+  "full_version": "coverm/0.7.0",
+  "master_version": "2"
+},
+{
+  "name": "qurro",
+  "version": "0.7.1",
+  "full_version": "qurro/0.7.1",
+  "master_version": "2"
+},
+{
+  "name": "circos-tools",
+  "version": "0.23",
+  "full_version": "circos-tools/0.23",
+  "master_version": "2"
+},
+{
+  "name": "phast",
+  "version": "1.5",
+  "full_version": "phast/1.5",
+  "master_version": "2"
+},
+{
+  "name": "pdflatex",
+  "version": "0.1.3",
+  "full_version": "pdflatex/0.1.3",
+  "master_version": "2"
+},
+{
+  "name": "devtools",
+  "version": "1.0",
+  "full_version": "devtools/1.0",
+  "master_version": "2"
+},
+{
+  "name": "bioconductor-dmrcate",
+  "version": "2.12.0",
+  "full_version": "bioconductor-dmrcate/2.12.0",
+  "master_version": "2"
+},
+{
+  "name": "breakdancer",
+  "version": "1.4.5",
+  "full_version": "breakdancer/1.4.5",
+  "master_version": "2"
+},
+{
+  "name": "lastz",
+  "version": "1.04.15",
+  "full_version": "lastz/1.04.15",
+  "master_version": "2"
+},
+{
+  "name": "emboss",
+  "version": "6.6.0",
+  "full_version": "emboss/6.6.0",
+  "master_version": "2"
+},
+{
+  "name": "samstats",
+  "version": "0.2.2",
+  "full_version": "samstats/0.2.2",
+  "master_version": "2"
+},
+{
+  "name": "artemis",
+  "version": "18.2.0",
+  "full_version": "artemis/18.2.0",
+  "master_version": "2"
+},
+{
+  "name": "arriba",
+  "version": "2.3.0",
+  "full_version": "arriba/2.3.0",
+  "master_version": "2"
+},
+{
+  "name": "multiz",
+  "version": "11.2",
+  "full_version": "multiz/11.2",
+  "master_version": "2"
+},
+{
+  "name": "sga",
+  "version": "0.10.15",
+  "full_version": "sga/0.10.15",
+  "master_version": "2"
+},
+{
+  "name": "beagle",
+  "version": "5.2_21Apr21.304",
+  "full_version": "beagle/5.2_21Apr21.304",
+  "master_version": "2"
+},
+{
+  "name": "scikit-learn",
+  "version": "1.6.1",
+  "full_version": "scikit-learn/1.6.1",
+  "master_version": "3"
+},
+{
+  "name": "airss",
+  "version": "0.9.3",
+  "full_version": "airss/0.9.3",
+  "master_version": "3"
+},
+{
+  "name": "vcftools",
+  "version": "0.1.16",
+  "full_version": "vcftools/0.1.16",
+  "master_version": "3"
+},
+{
+  "name": "majiq",
+  "version": "2.5",
+  "full_version": "majiq/2.5",
+  "master_version": "3"
+},
+{
+  "name": "kallisto",
+  "version": "0.51.1",
+  "full_version": "kallisto/0.51.1",
+  "master_version": "3"
+},
+{
+  "name": "bbtools",
+  "version": "39.56",
+  "full_version": "bbtools/39.56",
+  "master_version": "3"
+},
+{
+  "name": "bwa",
+  "version": "0.7.19",
+  "full_version": "bwa/0.7.19",
+  "master_version": "3"
+},
+{
+  "name": "antismash",
+  "version": "7.1.0",
+  "full_version": "antismash/7.1.0",
+  "master_version": "3"
+},
+{
+  "name": "antismash",
+  "version": "8.0.4",
+  "full_version": "antismash/8.0.4",
+  "master_version": "3"
+},
+{
+  "name": "seacr",
+  "version": "1.3",
+  "full_version": "seacr/1.3",
+  "master_version": "3"
+},
+{
+  "name": "metaboanalystR",
+  "version": "2.0",
+  "full_version": "metaboanalystR/2.0",
+  "master_version": "3"
+},
+{
+  "name": "maxbin2",
+  "version": "2.2.7",
+  "full_version": "maxbin2/2.2.7",
+  "master_version": "3"
+},
+{
+  "name": "meme",
+  "version": "5.5.8",
+  "full_version": "meme/5.5.8",
+  "master_version": "3"
+},
+{
+  "name": "bedtools",
+  "version": "2.31.1",
+  "full_version": "bedtools/2.31.1",
+  "master_version": "3"
+},
+{
+  "name": "graphaligner",
+  "version": "1.0.20",
+  "full_version": "graphaligner/1.0.20",
+  "master_version": "3"
+},
+{
+  "name": "spades",
+  "version": "4.2.0",
+  "full_version": "spades/4.2.0",
+  "master_version": "3"
+},
+{
+  "name": "spades",
+  "version": "4.0.0",
+  "full_version": "spades/4.0.0",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-bambu",
+  "version": "3.4.0",
+  "full_version": "bioconductor-bambu/3.4.0",
+  "master_version": "3"
+},
+{
+  "name": "gnomix",
+  "version": "1.0",
+  "full_version": "gnomix/1.0",
+  "master_version": "3"
+},
+{
+  "name": "pcangsd",
+  "version": "1.36.4",
+  "full_version": "pcangsd/1.36.4",
+  "master_version": "3"
+},
+{
+  "name": "cellsnp-lite",
+  "version": "1.2.3",
+  "full_version": "cellsnp-lite/1.2.3",
+  "master_version": "3"
+},
+{
+  "name": "jasminesv",
+  "version": "1.1.5",
+  "full_version": "jasminesv/1.1.5",
+  "master_version": "3"
+},
+{
+  "name": "souporcell",
+  "version": "2.5",
+  "full_version": "souporcell/2.5",
+  "master_version": "3"
+},
+{
+  "name": "genmap",
+  "version": "1.3.0",
+  "full_version": "genmap/1.3.0",
+  "master_version": "3"
+},
+{
+  "name": "genovi",
+  "version": "0.2.16",
+  "full_version": "genovi/0.2.16",
+  "master_version": "3"
+},
+{
+  "name": "prokka",
+  "version": "1.14.6",
+  "full_version": "prokka/1.14.6",
+  "master_version": "3"
+},
+{
+  "name": "pod5",
+  "version": "0.3.15",
+  "full_version": "pod5/0.3.15",
+  "master_version": "3"
+},
+{
+  "name": "dorado",
+  "version": "1.3.1",
+  "full_version": "dorado/1.3.1",
+  "master_version": "3"
+},
+{
+  "name": "dorado",
+  "version": "0.9.6",
+  "full_version": "dorado/0.9.6",
+  "master_version": "3"
+},
+{
+  "name": "dorado",
+  "version": "0.9.5",
+  "full_version": "dorado/0.9.5",
+  "master_version": "3"
+},
+{
+  "name": "dorado",
+  "version": "0.4.3",
+  "full_version": "dorado/0.4.3",
+  "master_version": "3"
+},
+{
+  "name": "f5c",
+  "version": "1.3",
+  "full_version": "f5c/1.3",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-ripseeker",
+  "version": "1.26.0",
+  "full_version": "bioconductor-ripseeker/1.26.0",
+  "master_version": "3"
+},
+{
+  "name": "pubmlst_client",
+  "version": "0.2.0",
+  "full_version": "pubmlst_client/0.2.0",
+  "master_version": "3"
+},
+{
+  "name": "fastStructure",
+  "version": "1.0",
+  "full_version": "fastStructure/1.0",
+  "master_version": "3"
+},
+{
+  "name": "fastStructure",
+  "version": "0.0.0",
+  "full_version": "fastStructure/0.0.0",
+  "master_version": "3"
+},
+{
+  "name": "cutadapt",
+  "version": "5.0",
+  "full_version": "cutadapt/5.0",
+  "master_version": "3"
+},
+{
+  "name": "bs-seeker2",
+  "version": "2.1.7",
+  "full_version": "bs-seeker2/2.1.7",
+  "master_version": "3"
+},
+{
+  "name": "mimi",
+  "version": "1.0.0",
+  "full_version": "mimi/1.0.0",
+  "master_version": "3"
+},
+{
+  "name": "pixy",
+  "version": "1.2.11",
+  "full_version": "pixy/1.2.11",
+  "master_version": "3"
+},
+{
+  "name": "pixy",
+  "version": "2.0.0.beta14",
+  "full_version": "pixy/2.0.0.beta14",
+  "master_version": "3"
+},
+{
+  "name": "phylophlan",
+  "version": "3.1.1",
+  "full_version": "phylophlan/3.1.1",
+  "master_version": "3"
+},
+{
+  "name": "megan",
+  "version": "6.25.10",
+  "full_version": "megan/6.25.10",
+  "master_version": "3"
+},
+{
+  "name": "pigz",
+  "version": "2.8",
+  "full_version": "pigz/2.8",
+  "master_version": "3"
+},
+{
+  "name": "medaka",
+  "version": "2.0.1",
+  "full_version": "medaka/2.0.1",
+  "master_version": "3"
+},
+{
+  "name": "paml",
+  "version": "4.10.7",
+  "full_version": "paml/4.10.7",
+  "master_version": "3"
+},
+{
+  "name": "r-vcfr",
+  "version": "1.15.0",
+  "full_version": "r-vcfr/1.15.0",
+  "master_version": "3"
+},
+{
+  "name": "rotate",
+  "version": "1.0",
+  "full_version": "rotate/1.0",
+  "master_version": "3"
+},
+{
+  "name": "cactus",
+  "version": "2019.03.01",
+  "full_version": "cactus/2019.03.01",
+  "master_version": "3"
+},
+{
+  "name": "truvari",
+  "version": "5.3.0",
+  "full_version": "truvari/5.3.0",
+  "master_version": "3"
+},
+{
+  "name": "instrain",
+  "version": "1.9.1",
+  "full_version": "instrain/1.9.1",
+  "master_version": "3"
+},
+{
+  "name": "pheniqs",
+  "version": "2.1.0",
+  "full_version": "pheniqs/2.1.0",
+  "master_version": "3"
+},
+{
+  "name": "chip_diff_homer",
+  "version": "1.0",
+  "full_version": "chip_diff_homer/1.0",
+  "master_version": "3"
+},
+{
+  "name": "metachip",
+  "version": "1.10.13",
+  "full_version": "metachip/1.10.13",
+  "master_version": "3"
+},
+{
+  "name": "recycler",
+  "version": "0.7",
+  "full_version": "recycler/0.7",
+  "master_version": "3"
+},
+{
+  "name": "r-seurat",
+  "version": "5.3.0",
+  "full_version": "r-seurat/5.3.0",
+  "master_version": "3"
+},
+{
+  "name": "r-seurat",
+  "version": "5.1.0",
+  "full_version": "r-seurat/5.1.0",
+  "master_version": "3"
+},
+{
+  "name": "flash",
+  "version": "1.2.11",
+  "full_version": "flash/1.2.11",
+  "master_version": "3"
+},
+{
+  "name": "gliph",
+  "version": "1.0",
+  "full_version": "gliph/1.0",
+  "master_version": "3"
+},
+{
+  "name": "checkm-genome",
+  "version": "1.2.3",
+  "full_version": "checkm-genome/1.2.3",
+  "master_version": "3"
+},
+{
+  "name": "nanostat",
+  "version": "1.6.0",
+  "full_version": "nanostat/1.6.0",
+  "master_version": "3"
+},
+{
+  "name": "vireosnp",
+  "version": "0.5.9",
+  "full_version": "vireosnp/0.5.9",
+  "master_version": "3"
+},
+{
+  "name": "corason",
+  "version": "1.0",
+  "full_version": "corason/1.0",
+  "master_version": "3"
+},
+{
+  "name": "mirtrace",
+  "version": "1.0.1",
+  "full_version": "mirtrace/1.0.1",
+  "master_version": "3"
+},
+{
+  "name": "liftoff",
+  "version": "1.6.3",
+  "full_version": "liftoff/1.6.3",
+  "master_version": "3"
+},
+{
+  "name": "perl-data-dumper",
+  "version": "2.183",
+  "full_version": "perl-data-dumper/2.183",
+  "master_version": "3"
+},
+{
+  "name": "filtlong",
+  "version": "0.2.1",
+  "full_version": "filtlong/0.2.1",
+  "master_version": "3"
+},
+{
+  "name": "ntlink",
+  "version": "1.3.11",
+  "full_version": "ntlink/1.3.11",
+  "master_version": "3"
+},
+{
+  "name": "glimpse-bio",
+  "version": "2.0.1",
+  "full_version": "glimpse-bio/2.0.1",
+  "master_version": "3"
+},
+{
+  "name": "flair",
+  "version": "3.0.0b1",
+  "full_version": "flair/3.0.0b1",
+  "master_version": "3"
+},
+{
+  "name": "das_tool",
+  "version": "1.1.7",
+  "full_version": "das_tool/1.1.7",
+  "master_version": "3"
+},
+{
+  "name": "scikit-allel",
+  "version": "1.3.13",
+  "full_version": "scikit-allel/1.3.13",
+  "master_version": "3"
+},
+{
+  "name": "r-azimuth",
+  "version": "0.5.0",
+  "full_version": "r-azimuth/0.5.0",
+  "master_version": "3"
+},
+{
+  "name": "minced",
+  "version": "0.4.2",
+  "full_version": "minced/0.4.2",
+  "master_version": "3"
+},
+{
+  "name": "easysfs",
+  "version": "0.0.1",
+  "full_version": "easysfs/0.0.1",
+  "master_version": "3"
+},
+{
+  "name": "doubletdetection",
+  "version": "4.3.0.post1",
+  "full_version": "doubletdetection/4.3.0.post1",
+  "master_version": "3"
+},
+{
+  "name": "mcl",
+  "version": "22.282",
+  "full_version": "mcl/22.282",
+  "master_version": "3"
+},
+{
+  "name": "repeatmodeler",
+  "version": "2.0.7",
+  "full_version": "repeatmodeler/2.0.7",
+  "master_version": "3"
+},
+{
+  "name": "smcpp",
+  "version": "1.15.4",
+  "full_version": "smcpp/1.15.4",
+  "master_version": "3"
+},
+{
+  "name": "easyfig",
+  "version": "2.2.2",
+  "full_version": "easyfig/2.2.2",
+  "master_version": "3"
+},
+{
+  "name": "gnuplot",
+  "version": "5.4.10",
+  "full_version": "gnuplot/5.4.10",
+  "master_version": "3"
+},
+{
+  "name": "rgi",
+  "version": "6.0.3",
+  "full_version": "rgi/6.0.3",
+  "master_version": "3"
+},
+{
+  "name": "rgi",
+  "version": "6.0.5",
+  "full_version": "rgi/6.0.5",
+  "master_version": "3"
+},
+{
+  "name": "ollama",
+  "version": "0.17.0",
+  "full_version": "ollama/0.17.0",
+  "master_version": "3"
+},
+{
+  "name": "psmc",
+  "version": "0.6.5",
+  "full_version": "psmc/0.6.5",
+  "master_version": "3"
+},
+{
+  "name": "squire",
+  "version": "0.9.9.92",
+  "full_version": "squire/0.9.9.92",
+  "master_version": "3"
+},
+{
+  "name": "olink_preprocess",
+  "version": "6.2.0",
+  "full_version": "olink_preprocess/6.2.0",
+  "master_version": "3"
+},
+{
+  "name": "olink_preprocess",
+  "version": "5.1.0",
+  "full_version": "olink_preprocess/5.1.0",
+  "master_version": "3"
+},
+{
+  "name": "iqtree",
+  "version": "2.3.6",
+  "full_version": "iqtree/2.3.6",
+  "master_version": "3"
+},
+{
+  "name": "iqtree",
+  "version": "3.0.1",
+  "full_version": "iqtree/3.0.1",
+  "master_version": "3"
+},
+{
+  "name": "nanom6A",
+  "version": "2022_12",
+  "full_version": "nanom6A/2022_12",
+  "master_version": "3"
+},
+{
+  "name": "cpat",
+  "version": "3.0.5",
+  "full_version": "cpat/3.0.5",
+  "master_version": "3"
+},
+{
+  "name": "odgi",
+  "version": "0.9.2",
+  "full_version": "odgi/0.9.2",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-biomart",
+  "version": "2.62.0",
+  "full_version": "bioconductor-biomart/2.62.0",
+  "master_version": "3"
+},
+{
+  "name": "circlator",
+  "version": "1.5.5",
+  "full_version": "circlator/1.5.5",
+  "master_version": "3"
+},
+{
+  "name": "salsa2",
+  "version": "2.3",
+  "full_version": "salsa2/2.3",
+  "master_version": "3"
+},
+{
+  "name": "braker2",
+  "version": "2.1.6",
+  "full_version": "braker2/2.1.6",
+  "master_version": "3"
+},
+{
+  "name": "soapdenovo2-gapcloser",
+  "version": "1.12",
+  "full_version": "soapdenovo2-gapcloser/1.12",
+  "master_version": "3"
+},
+{
+  "name": "cnci",
+  "version": "1.0",
+  "full_version": "cnci/1.0",
+  "master_version": "3"
+},
+{
+  "name": "syri",
+  "version": "1.7.0",
+  "full_version": "syri/1.7.0",
+  "master_version": "3"
+},
+{
+  "name": "eukcc",
+  "version": "2.1.3",
+  "full_version": "eukcc/2.1.3",
+  "master_version": "3"
+},
+{
+  "name": "plink2",
+  "version": "2.00a5.10",
+  "full_version": "plink2/2.00a5.10",
+  "master_version": "3"
+},
+{
+  "name": "limit_qtl",
+  "version": "1.0",
+  "full_version": "limit_qtl/1.0",
+  "master_version": "3"
+},
+{
+  "name": "gfatools",
+  "version": "0.5",
+  "full_version": "gfatools/0.5",
+  "master_version": "3"
+},
+{
+  "name": "cgmaptools",
+  "version": "0.1.2",
+  "full_version": "cgmaptools/0.1.2",
+  "master_version": "3"
+},
+{
+  "name": "cadd-scripts",
+  "version": "1.7.1",
+  "full_version": "cadd-scripts/1.7.1",
+  "master_version": "3"
+},
+{
+  "name": "metaerg",
+  "version": "1.2.3",
+  "full_version": "metaerg/1.2.3",
+  "master_version": "3"
+},
+{
+  "name": "R-PlotPopGen",
+  "version": "1.0",
+  "full_version": "R-PlotPopGen/1.0",
+  "master_version": "3"
+},
+{
+  "name": "eukfinder",
+  "version": "1.2.4",
+  "full_version": "eukfinder/1.2.4",
+  "master_version": "3"
+},
+{
+  "name": "m6anet",
+  "version": "2.1.0",
+  "full_version": "m6anet/2.1.0",
+  "master_version": "3"
+},
+{
+  "name": "mirtop",
+  "version": "0.4.28",
+  "full_version": "mirtop/0.4.28",
+  "master_version": "3"
+},
+{
+  "name": "mitofinder",
+  "version": "1.4.1",
+  "full_version": "mitofinder/1.4.1",
+  "master_version": "3"
+},
+{
+  "name": "mummer",
+  "version": "3.23",
+  "full_version": "mummer/3.23",
+  "master_version": "3"
+},
+{
+  "name": "kofamscan",
+  "version": "1.3.0",
+  "full_version": "kofamscan/1.3.0",
+  "master_version": "3"
+},
+{
+  "name": "twisst2",
+  "version": "0.0.5",
+  "full_version": "twisst2/0.0.5",
+  "master_version": "3"
+},
+{
+  "name": "twisst2",
+  "version": "0.0.4",
+  "full_version": "twisst2/0.0.4",
+  "master_version": "3"
+},
+{
+  "name": "getorganelle",
+  "version": "1.7.7.1",
+  "full_version": "getorganelle/1.7.7.1",
+  "master_version": "3"
+},
+{
+  "name": "EUKsemble",
+  "version": "1.1.0",
+  "full_version": "EUKsemble/1.1.0",
+  "master_version": "3"
+},
+{
+  "name": "jupiterplot",
+  "version": "1.1",
+  "full_version": "jupiterplot/1.1",
+  "master_version": "3"
+},
+{
+  "name": "pysam",
+  "version": "0.23.0",
+  "full_version": "pysam/0.23.0",
+  "master_version": "3"
+},
+{
+  "name": "cobra-meta",
+  "version": "1.2.3",
+  "full_version": "cobra-meta/1.2.3",
+  "master_version": "3"
+},
+{
+  "name": "prism",
+  "version": "2.1.5",
+  "full_version": "prism/2.1.5",
+  "master_version": "3"
+},
+{
+  "name": "memento",
+  "version": "0.1.0",
+  "full_version": "memento/0.1.0",
+  "master_version": "3"
+},
+{
+  "name": "plek2",
+  "version": "2.1",
+  "full_version": "plek2/2.1",
+  "master_version": "3"
+},
+{
+  "name": "bayescan",
+  "version": "2.0.1",
+  "full_version": "bayescan/2.0.1",
+  "master_version": "3"
+},
+{
+  "name": "parallel",
+  "version": "20170422",
+  "full_version": "parallel/20170422",
+  "master_version": "3"
+},
+{
+  "name": "nanofilt",
+  "version": "2.8.0",
+  "full_version": "nanofilt/2.8.0",
+  "master_version": "3"
+},
+{
+  "name": "bigscape",
+  "version": "1.1.9",
+  "full_version": "bigscape/1.1.9",
+  "master_version": "3"
+},
+{
+  "name": "bigscape",
+  "version": "2.0.2",
+  "full_version": "bigscape/2.0.2",
+  "master_version": "3"
+},
+{
+  "name": "hisat2",
+  "version": "2.2.1",
+  "full_version": "hisat2/2.2.1",
+  "master_version": "3"
+},
+{
+  "name": "alder",
+  "version": "1.03",
+  "full_version": "alder/1.03",
+  "master_version": "3"
+},
+{
+  "name": "medusa",
+  "version": "1.0",
+  "full_version": "medusa/1.0",
+  "master_version": "3"
+},
+{
+  "name": "katmap",
+  "version": "1.0",
+  "full_version": "katmap/1.0",
+  "master_version": "3"
+},
+{
+  "name": "polydfe",
+  "version": "2.0",
+  "full_version": "polydfe/2.0",
+  "master_version": "3"
+},
+{
+  "name": "bracken",
+  "version": "3.1",
+  "full_version": "bracken/3.1",
+  "master_version": "3"
+},
+{
+  "name": "bracken",
+  "version": "2.6.1",
+  "full_version": "bracken/2.6.1",
+  "master_version": "3"
+},
+{
+  "name": "hclust2",
+  "version": "1.0.0",
+  "full_version": "hclust2/1.0.0",
+  "master_version": "3"
+},
+{
+  "name": "vcflib",
+  "version": "1.0.14",
+  "full_version": "vcflib/1.0.14",
+  "master_version": "3"
+},
+{
+  "name": "r-doubletfinder",
+  "version": "2.0.4",
+  "full_version": "r-doubletfinder/2.0.4",
+  "master_version": "3"
+},
+{
+  "name": "reportseff",
+  "version": "2.10.0",
+  "full_version": "reportseff/2.10.0",
+  "master_version": "3"
+},
+{
+  "name": "micov",
+  "version": "2025.9",
+  "full_version": "micov/2025.9",
+  "master_version": "3"
+},
+{
+  "name": "gadma",
+  "version": "2.0.3",
+  "full_version": "gadma/2.0.3",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-maaslin2",
+  "version": "1.18.0",
+  "full_version": "bioconductor-maaslin2/1.18.0",
+  "master_version": "3"
+},
+{
+  "name": "aragorn",
+  "version": "1.2.41",
+  "full_version": "aragorn/1.2.41",
+  "master_version": "3"
+},
+{
+  "name": "mlst",
+  "version": "2.23.0",
+  "full_version": "mlst/2.23.0",
+  "master_version": "3"
+},
+{
+  "name": "busco",
+  "version": "5.8.3",
+  "full_version": "busco/5.8.3",
+  "master_version": "3"
+},
+{
+  "name": "ntedit",
+  "version": "2.1.1",
+  "full_version": "ntedit/2.1.1",
+  "master_version": "3"
+},
+{
+  "name": "fqtrim",
+  "version": "0.9.7",
+  "full_version": "fqtrim/0.9.7",
+  "master_version": "3"
+},
+{
+  "name": "r-adegenet",
+  "version": "2.1.11",
+  "full_version": "r-adegenet/2.1.11",
+  "master_version": "3"
+},
+{
+  "name": "augustus",
+  "version": "3.5.0",
+  "full_version": "augustus/3.5.0",
+  "master_version": "3"
+},
+{
+  "name": "seqkit",
+  "version": "2.10.1",
+  "full_version": "seqkit/2.10.1",
+  "master_version": "3"
+},
+{
+  "name": "salmon",
+  "version": "1.10.3",
+  "full_version": "salmon/1.10.3",
+  "master_version": "3"
+},
+{
+  "name": "cellt",
+  "version": "1.0",
+  "full_version": "cellt/1.0",
+  "master_version": "3"
+},
+{
+  "name": "tmhmm",
+  "version": "2.0c",
+  "full_version": "tmhmm/2.0c",
+  "master_version": "3"
+},
+{
+  "name": "qiime",
+  "version": "1.9.1",
+  "full_version": "qiime/1.9.1",
+  "master_version": "3"
+},
+{
+  "name": "ete3",
+  "version": "3.1.2",
+  "full_version": "ete3/3.1.2",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-drimseq",
+  "version": "1.34.0",
+  "full_version": "bioconductor-drimseq/1.34.0",
+  "master_version": "3"
+},
+{
+  "name": "iphop",
+  "version": "1.3.3",
+  "full_version": "iphop/1.3.3",
+  "master_version": "3"
+},
+{
+  "name": "plotsr",
+  "version": "1.1.1",
+  "full_version": "plotsr/1.1.1",
+  "master_version": "3"
+},
+{
+  "name": "braker",
+  "version": "1.9",
+  "full_version": "braker/1.9",
+  "master_version": "3"
+},
+{
+  "name": "rnaplonc",
+  "version": "1.0",
+  "full_version": "rnaplonc/1.0",
+  "master_version": "3"
+},
+{
+  "name": "ncbi-amrfinderplus",
+  "version": "4.0.23",
+  "full_version": "ncbi-amrfinderplus/4.0.23",
+  "master_version": "3"
+},
+{
+  "name": "sparcc",
+  "version": "0.1.0",
+  "full_version": "sparcc/0.1.0",
+  "master_version": "3"
+},
+{
+  "name": "isotools",
+  "version": "2.0.0",
+  "full_version": "isotools/2.0.0",
+  "master_version": "3"
+},
+{
+  "name": "bedops",
+  "version": "2.4.42",
+  "full_version": "bedops/2.4.42",
+  "master_version": "3"
+},
+{
+  "name": "bismark",
+  "version": "0.24.2",
+  "full_version": "bismark/0.24.2",
+  "master_version": "3"
+},
+{
+  "name": "bowtie2",
+  "version": "2.5.4",
+  "full_version": "bowtie2/2.5.4",
+  "master_version": "3"
+},
+{
+  "name": "cellprofiler",
+  "version": "4.2.8",
+  "full_version": "cellprofiler/4.2.8",
+  "master_version": "3"
+},
+{
+  "name": "ploidyngs",
+  "version": "3.1.3",
+  "full_version": "ploidyngs/3.1.3",
+  "master_version": "3"
+},
+{
+  "name": "stacks",
+  "version": "2.68",
+  "full_version": "stacks/2.68",
+  "master_version": "3"
+},
+{
+  "name": "fastqc",
+  "version": "0.12.1",
+  "full_version": "fastqc/0.12.1",
+  "master_version": "3"
+},
+{
+  "name": "shortbred",
+  "version": "0.9.3",
+  "full_version": "shortbred/0.9.3",
+  "master_version": "3"
+},
+{
+  "name": "ntjoin",
+  "version": "1.1.5",
+  "full_version": "ntjoin/1.1.5",
+  "master_version": "3"
+},
+{
+  "name": "mob_suite",
+  "version": "3.1.9",
+  "full_version": "mob_suite/3.1.9",
+  "master_version": "3"
+},
+{
+  "name": "stringtie",
+  "version": "3.0.0",
+  "full_version": "stringtie/3.0.0",
+  "master_version": "3"
+},
+{
+  "name": "fastsimcoal2",
+  "version": "27093",
+  "full_version": "fastsimcoal2/27093",
+  "master_version": "3"
+},
+{
+  "name": "trinity",
+  "version": "2.15.2",
+  "full_version": "trinity/2.15.2",
+  "master_version": "3"
+},
+{
+  "name": "ont-tombo",
+  "version": "1.5.1",
+  "full_version": "ont-tombo/1.5.1",
+  "master_version": "3"
+},
+{
+  "name": "dsuite",
+  "version": "1.0",
+  "full_version": "dsuite/1.0",
+  "master_version": "3"
+},
+{
+  "name": "gunc",
+  "version": "1.0.6",
+  "full_version": "gunc/1.0.6",
+  "master_version": "3"
+},
+{
+  "name": "eggnog-mapper",
+  "version": "2.1.12",
+  "full_version": "eggnog-mapper/2.1.12",
+  "master_version": "3"
+},
+{
+  "name": "pyrho",
+  "version": "1.1",
+  "full_version": "pyrho/1.1",
+  "master_version": "3"
+},
+{
+  "name": "gatk4",
+  "version": "4.2.6.1",
+  "full_version": "gatk4/4.2.6.1",
+  "master_version": "3"
+},
+{
+  "name": "gatk4",
+  "version": "4.6.1.0",
+  "full_version": "gatk4/4.6.1.0",
+  "master_version": "3"
+},
+{
+  "name": "popscle",
+  "version": "0.1",
+  "full_version": "popscle/0.1",
+  "master_version": "3"
+},
+{
+  "name": "metawrap-mg",
+  "version": "1.3.0",
+  "full_version": "metawrap-mg/1.3.0",
+  "master_version": "3"
+},
+{
+  "name": "comebin",
+  "version": "1.0.4",
+  "full_version": "comebin/1.0.4",
+  "master_version": "3"
+},
+{
+  "name": "r-dplyr",
+  "version": "1.1.4",
+  "full_version": "r-dplyr/1.1.4",
+  "master_version": "3"
+},
+{
+  "name": "solote",
+  "version": "1.09",
+  "full_version": "solote/1.09",
+  "master_version": "3"
+},
+{
+  "name": "treemix",
+  "version": "1.13",
+  "full_version": "treemix/1.13",
+  "master_version": "3"
+},
+{
+  "name": "fastq-screen",
+  "version": "0.16.0",
+  "full_version": "fastq-screen/0.16.0",
+  "master_version": "3"
+},
+{
+  "name": "concoct",
+  "version": "1.1.0",
+  "full_version": "concoct/1.1.0",
+  "master_version": "3"
+},
+{
+  "name": "trekker",
+  "version": "1.3.0",
+  "full_version": "trekker/1.3.0",
+  "master_version": "3"
+},
+{
+  "name": "r-hardyweinberg",
+  "version": "1.6.3",
+  "full_version": "r-hardyweinberg/1.6.3",
+  "master_version": "3"
+},
+{
+  "name": "kraken2",
+  "version": "2.1.6",
+  "full_version": "kraken2/2.1.6",
+  "master_version": "3"
+},
+{
+  "name": "kraken2",
+  "version": "2.14",
+  "full_version": "kraken2/2.14",
+  "master_version": "3"
+},
+{
+  "name": "kraken2",
+  "version": "2.1.2",
+  "full_version": "kraken2/2.1.2",
+  "master_version": "3"
+},
+{
+  "name": "kraken2",
+  "version": "2.17.1",
+  "full_version": "kraken2/2.17.1",
+  "master_version": "3"
+},
+{
+  "name": "porechop",
+  "version": "0.2.4",
+  "full_version": "porechop/0.2.4",
+  "master_version": "3"
+},
+{
+  "name": "mdsufz-download",
+  "version": "1.0",
+  "full_version": "mdsufz-download/1.0",
+  "master_version": "3"
+},
+{
+  "name": "mgefinder",
+  "version": "0.0.1.dev7",
+  "full_version": "mgefinder/0.0.1.dev7",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-genesis",
+  "version": "2.36.0",
+  "full_version": "bioconductor-genesis/2.36.0",
+  "master_version": "3"
+},
+{
+  "name": "mitohifi",
+  "version": "3.2.3",
+  "full_version": "mitohifi/3.2.3",
+  "master_version": "3"
+},
+{
+  "name": "flye",
+  "version": "2.9.6",
+  "full_version": "flye/2.9.6",
+  "master_version": "3"
+},
+{
+  "name": "flye",
+  "version": "2.9.5",
+  "full_version": "flye/2.9.5",
+  "master_version": "3"
+},
+{
+  "name": "nextpolish",
+  "version": "1.4.1",
+  "full_version": "nextpolish/1.4.1",
+  "master_version": "3"
+},
+{
+  "name": "libboost",
+  "version": "1.89.0",
+  "full_version": "libboost/1.89.0",
+  "master_version": "3"
+},
+{
+  "name": "tigmint",
+  "version": "1.2.10",
+  "full_version": "tigmint/1.2.10",
+  "master_version": "3"
+},
+{
+  "name": "whokaryote",
+  "version": "1.1.2",
+  "full_version": "whokaryote/1.1.2",
+  "master_version": "3"
+},
+{
+  "name": "python",
+  "version": "3.12",
+  "full_version": "python/3.12",
+  "master_version": "3"
+},
+{
+  "name": "anvio",
+  "version": "7.1",
+  "full_version": "anvio/7.1",
+  "master_version": "3"
+},
+{
+  "name": "anvio",
+  "version": "8.0",
+  "full_version": "anvio/8.0",
+  "master_version": "3"
+},
+{
+  "name": "sicilian",
+  "version": "1.0",
+  "full_version": "sicilian/1.0",
+  "master_version": "3"
+},
+{
+  "name": "agat",
+  "version": "1.5.1",
+  "full_version": "agat/1.5.1",
+  "master_version": "3"
+},
+{
+  "name": "agat",
+  "version": "1.4.2",
+  "full_version": "agat/1.4.2",
+  "master_version": "3"
+},
+{
+  "name": "seqsero2",
+  "version": "1.3.1",
+  "full_version": "seqsero2/1.3.1",
+  "master_version": "3"
+},
+{
+  "name": "interproscan",
+  "version": "5.76-107.0",
+  "full_version": "interproscan/5.76-107.0",
+  "master_version": "3"
+},
+{
+  "name": "hifiasm",
+  "version": "0.25.0",
+  "full_version": "hifiasm/0.25.0",
+  "master_version": "3"
+},
+{
+  "name": "minigraph",
+  "version": "0.21",
+  "full_version": "minigraph/0.21",
+  "master_version": "3"
+},
+{
+  "name": "genomad",
+  "version": "1.11.2",
+  "full_version": "genomad/1.11.2",
+  "master_version": "3"
+},
+{
+  "name": "quast",
+  "version": "5.3.0",
+  "full_version": "quast/5.3.0",
+  "master_version": "3"
+},
+{
+  "name": "quast",
+  "version": "5.0.2",
+  "full_version": "quast/5.0.2",
+  "master_version": "3"
+},
+{
+  "name": "r-poppr",
+  "version": "2.9.6",
+  "full_version": "r-poppr/2.9.6",
+  "master_version": "3"
+},
+{
+  "name": "whatshap",
+  "version": "2.4",
+  "full_version": "whatshap/2.4",
+  "master_version": "3"
+},
+{
+  "name": "dbcan",
+  "version": "5.1.2",
+  "full_version": "dbcan/5.1.2",
+  "master_version": "3"
+},
+{
+  "name": "sticcs",
+  "version": "1.0",
+  "full_version": "sticcs/1.0",
+  "master_version": "3"
+},
+{
+  "name": "sticcs",
+  "version": "0.0.5",
+  "full_version": "sticcs/0.0.5",
+  "master_version": "3"
+},
+{
+  "name": "khmer",
+  "version": "3.0.0a3",
+  "full_version": "khmer/3.0.0a3",
+  "master_version": "3"
+},
+{
+  "name": "snpeff",
+  "version": "5.2",
+  "full_version": "snpeff/5.2",
+  "master_version": "3"
+},
+{
+  "name": "maser",
+  "version": "1.24",
+  "full_version": "maser/1.24",
+  "master_version": "3"
+},
+{
+  "name": "nanopolish",
+  "version": "0.14.0",
+  "full_version": "nanopolish/0.14.0",
+  "master_version": "3"
+},
+{
+  "name": "clustalo",
+  "version": "1.2.4",
+  "full_version": "clustalo/1.2.4",
+  "master_version": "3"
+},
+{
+  "name": "ensembl-vep",
+  "version": "115.2",
+  "full_version": "ensembl-vep/115.2",
+  "master_version": "3"
+},
+{
+  "name": "ensembl-vep",
+  "version": "113.3",
+  "full_version": "ensembl-vep/113.3",
+  "master_version": "3"
+},
+{
+  "name": "ensembl-vep",
+  "version": "114.0",
+  "full_version": "ensembl-vep/114.0",
+  "master_version": "3"
+},
+{
+  "name": "mafft",
+  "version": "7.525",
+  "full_version": "mafft/7.525",
+  "master_version": "3"
+},
+{
+  "name": "beenet",
+  "version": "2.0",
+  "full_version": "beenet/2.0",
+  "master_version": "3"
+},
+{
+  "name": "list-s2",
+  "version": "1.10",
+  "full_version": "list-s2/1.10",
+  "master_version": "3"
+},
+{
+  "name": "gaas",
+  "version": "1.2.0",
+  "full_version": "gaas/1.2.0",
+  "master_version": "3"
+},
+{
+  "name": "minimap2",
+  "version": "2.28",
+  "full_version": "minimap2/2.28",
+  "master_version": "3"
+},
+{
+  "name": "tbb",
+  "version": "2022.1.0",
+  "full_version": "tbb/2022.1.0",
+  "master_version": "3"
+},
+{
+  "name": "trnascan-se",
+  "version": "2.0.12",
+  "full_version": "trnascan-se/2.0.12",
+  "master_version": "3"
+},
+{
+  "name": "twisst",
+  "version": "1.0",
+  "full_version": "twisst/1.0",
+  "master_version": "3"
+},
+{
+  "name": "hmmer",
+  "version": "3.4",
+  "full_version": "hmmer/3.4",
+  "master_version": "3"
+},
+{
+  "name": "matplotlib",
+  "version": "3.10.1",
+  "full_version": "matplotlib/3.10.1",
+  "master_version": "3"
+},
+{
+  "name": "TransDecoder",
+  "version": "5.7.1",
+  "full_version": "TransDecoder/5.7.1",
+  "master_version": "3"
+},
+{
+  "name": "samtools",
+  "version": "1.22",
+  "full_version": "samtools/1.22",
+  "master_version": "3"
+},
+{
+  "name": "samtools",
+  "version": "1.21",
+  "full_version": "samtools/1.21",
+  "master_version": "3"
+},
+{
+  "name": "multiqc",
+  "version": "1.28",
+  "full_version": "multiqc/1.28",
+  "master_version": "3"
+},
+{
+  "name": "eigensoft",
+  "version": "8.0.0",
+  "full_version": "eigensoft/8.0.0",
+  "master_version": "3"
+},
+{
+  "name": "pmat",
+  "version": "1.5.3",
+  "full_version": "pmat/1.5.3",
+  "master_version": "3"
+},
+{
+  "name": "biopython",
+  "version": "1.85",
+  "full_version": "biopython/1.85",
+  "master_version": "3"
+},
+{
+  "name": "slivar",
+  "version": "0.3.3",
+  "full_version": "slivar/0.3.3",
+  "master_version": "3"
+},
+{
+  "name": "tiara",
+  "version": "1.0.3",
+  "full_version": "tiara/1.0.3",
+  "master_version": "3"
+},
+{
+  "name": "bwa-mem2",
+  "version": "2.2.1",
+  "full_version": "bwa-mem2/2.2.1",
+  "master_version": "3"
+},
+{
+  "name": "plasmidfinder",
+  "version": "2.1.6",
+  "full_version": "plasmidfinder/2.1.6",
+  "master_version": "3"
+},
+{
+  "name": "unicycler",
+  "version": "0.5.1",
+  "full_version": "unicycler/0.5.1",
+  "master_version": "3"
+},
+{
+  "name": "pygenometracks",
+  "version": "3.9",
+  "full_version": "pygenometracks/3.9",
+  "master_version": "3"
+},
+{
+  "name": "lrge",
+  "version": "0.2.0",
+  "full_version": "lrge/0.2.0",
+  "master_version": "3"
+},
+{
+  "name": "gmap",
+  "version": "2025.04.19",
+  "full_version": "gmap/2025.04.19",
+  "master_version": "3"
+},
+{
+  "name": "nlpprecursor",
+  "version": "1.0",
+  "full_version": "nlpprecursor/1.0",
+  "master_version": "3"
+},
+{
+  "name": "zmwfilter",
+  "version": "1.0.0",
+  "full_version": "zmwfilter/1.0.0",
+  "master_version": "3"
+},
+{
+  "name": "velvet",
+  "version": "1.2.10",
+  "full_version": "velvet/1.2.10",
+  "master_version": "3"
+},
+{
+  "name": "rinalmo",
+  "version": "1.0",
+  "full_version": "rinalmo/1.0",
+  "master_version": "3"
+},
+{
+  "name": "bamtools",
+  "version": "2.5.2",
+  "full_version": "bamtools/2.5.2",
+  "master_version": "3"
+},
+{
+  "name": "bamtools",
+  "version": "2.5.3",
+  "full_version": "bamtools/2.5.3",
+  "master_version": "3"
+},
+{
+  "name": "msprime",
+  "version": "1.3.3",
+  "full_version": "msprime/1.3.3",
+  "master_version": "3"
+},
+{
+  "name": "lassip",
+  "version": "1.2.1",
+  "full_version": "lassip/1.2.1",
+  "master_version": "3"
+},
+{
+  "name": "vamb",
+  "version": "5.0.4",
+  "full_version": "vamb/5.0.4",
+  "master_version": "3"
+},
+{
+  "name": "pil_dada2",
+  "version": "1.0",
+  "full_version": "pil_dada2/1.0",
+  "master_version": "3"
+},
+{
+  "name": "perl-yaml",
+  "version": "1.30",
+  "full_version": "perl-yaml/1.30",
+  "master_version": "3"
+},
+{
+  "name": "archetypal-analysis",
+  "version": "0.1.0",
+  "full_version": "archetypal-analysis/0.1.0",
+  "master_version": "3"
+},
+{
+  "name": "deepmicroclass",
+  "version": "1.0.3",
+  "full_version": "deepmicroclass/1.0.3",
+  "master_version": "3"
+},
+{
+  "name": "arb-bio",
+  "version": "6.0.6",
+  "full_version": "arb-bio/6.0.6",
+  "master_version": "3"
+},
+{
+  "name": "yahs",
+  "version": "1.2.2",
+  "full_version": "yahs/1.2.2",
+  "master_version": "3"
+},
+{
+  "name": "snakemake",
+  "version": "9.6.0",
+  "full_version": "snakemake/9.6.0",
+  "master_version": "3"
+},
+{
+  "name": "gemma",
+  "version": "0.98.5",
+  "full_version": "gemma/0.98.5",
+  "master_version": "3"
+},
+{
+  "name": "bubblegun",
+  "version": "1.1.9",
+  "full_version": "bubblegun/1.1.9",
+  "master_version": "3"
+},
+{
+  "name": "ldblockshow",
+  "version": "1.41",
+  "full_version": "ldblockshow/1.41",
+  "master_version": "3"
+},
+{
+  "name": "gtdbtk",
+  "version": "2.4.1",
+  "full_version": "gtdbtk/2.4.1",
+  "master_version": "3"
+},
+{
+  "name": "gtdbtk",
+  "version": "2.4.0",
+  "full_version": "gtdbtk/2.4.0",
+  "master_version": "3"
+},
+{
+  "name": "gtdbtk",
+  "version": "2.5.2",
+  "full_version": "gtdbtk/2.5.2",
+  "master_version": "3"
+},
+{
+  "name": "ncdu",
+  "version": "1.22",
+  "full_version": "ncdu/1.22",
+  "master_version": "3"
+},
+{
+  "name": "picard",
+  "version": "3.3.0",
+  "full_version": "picard/3.3.0",
+  "master_version": "3"
+},
+{
+  "name": "jellyfish",
+  "version": "2.2.10",
+  "full_version": "jellyfish/2.2.10",
+  "master_version": "3"
+},
+{
+  "name": "humann",
+  "version": "3.5",
+  "full_version": "humann/3.5",
+  "master_version": "3"
+},
+{
+  "name": "humann",
+  "version": "3.9",
+  "full_version": "humann/3.9",
+  "master_version": "3"
+},
+{
+  "name": "r-base",
+  "version": "4.4.3",
+  "full_version": "r-base/4.4.3",
+  "master_version": "3"
+},
+{
+  "name": "hdmi",
+  "version": "1.0.0",
+  "full_version": "hdmi/1.0.0",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-deseq2",
+  "version": "1.46.0",
+  "full_version": "bioconductor-deseq2/1.46.0",
+  "master_version": "3"
+},
+{
+  "name": "resfinder",
+  "version": "4.6.0",
+  "full_version": "resfinder/4.6.0",
+  "master_version": "3"
+},
+{
+  "name": "abyss",
+  "version": "2.3.10",
+  "full_version": "abyss/2.3.10",
+  "master_version": "3"
+},
+{
+  "name": "gffread",
+  "version": "0.12.7",
+  "full_version": "gffread/0.12.7",
+  "master_version": "3"
+},
+{
+  "name": "canu",
+  "version": "2.3",
+  "full_version": "canu/2.3",
+  "master_version": "3"
+},
+{
+  "name": "angsd",
+  "version": "0.940",
+  "full_version": "angsd/0.940",
+  "master_version": "3"
+},
+{
+  "name": "globus-cli",
+  "version": "3.33.0",
+  "full_version": "globus-cli/3.33.0",
+  "master_version": "3"
+},
+{
+  "name": "NLGenomeSweeper",
+  "version": "1.2.1",
+  "full_version": "NLGenomeSweeper/1.2.1",
+  "master_version": "3"
+},
+{
+  "name": "hap-ibd",
+  "version": "1.0.rev20May22.818",
+  "full_version": "hap-ibd/1.0.rev20May22.818",
+  "master_version": "3"
+},
+{
+  "name": "r-ggplot2",
+  "version": "3.5.1",
+  "full_version": "r-ggplot2/3.5.1",
+  "master_version": "3"
+},
+{
+  "name": "ntedit_sealer",
+  "version": "1.1.0",
+  "full_version": "ntedit_sealer/1.1.0",
+  "master_version": "3"
+},
+{
+  "name": "gtotree",
+  "version": "1.8.10",
+  "full_version": "gtotree/1.8.10",
+  "master_version": "3"
+},
+{
+  "name": "gtotree",
+  "version": "1.8.13",
+  "full_version": "gtotree/1.8.13",
+  "master_version": "3"
+},
+{
+  "name": "spliz",
+  "version": "1.0",
+  "full_version": "spliz/1.0",
+  "master_version": "3"
+},
+{
+  "name": "nanoplot",
+  "version": "1.44.1",
+  "full_version": "nanoplot/1.44.1",
+  "master_version": "3"
+},
+{
+  "name": "pop_pca",
+  "version": "1.0",
+  "full_version": "pop_pca/1.0",
+  "master_version": "3"
+},
+{
+  "name": "r-seurat-custom",
+  "version": "5.4.0",
+  "full_version": "r-seurat-custom/5.4.0",
+  "master_version": "3"
+},
+{
+  "name": "repeatmasker",
+  "version": "4.1.9",
+  "full_version": "repeatmasker/4.1.9",
+  "master_version": "3"
+},
+{
+  "name": "ngspsmc",
+  "version": "1.1",
+  "full_version": "ngspsmc/1.1",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-scdblfinder",
+  "version": "1.23.4",
+  "full_version": "bioconductor-scdblfinder/1.23.4",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-dss",
+  "version": "2.54.0",
+  "full_version": "bioconductor-dss/2.54.0",
+  "master_version": "3"
+},
+{
+  "name": "r-pairadise",
+  "version": "1.0.0",
+  "full_version": "r-pairadise/1.0.0",
+  "master_version": "3"
+},
+{
+  "name": "infernal",
+  "version": "1.1.5",
+  "full_version": "infernal/1.1.5",
+  "master_version": "3"
+},
+{
+  "name": "astral-tree",
+  "version": "5.7.8",
+  "full_version": "astral-tree/5.7.8",
+  "master_version": "3"
+},
+{
+  "name": "apptainer",
+  "version": "1.4.1",
+  "full_version": "apptainer/1.4.1",
+  "master_version": "3"
+},
+{
+  "name": "relernn",
+  "version": "1.0.0",
+  "full_version": "relernn/1.0.0",
+  "master_version": "3"
+},
+{
+  "name": "liblapack",
+  "version": "3.9.0",
+  "full_version": "liblapack/3.9.0",
+  "master_version": "3"
+},
+{
+  "name": "rna-fm",
+  "version": "0.2.2",
+  "full_version": "rna-fm/0.2.2",
+  "master_version": "3"
+},
+{
+  "name": "EasyBuild",
+  "version": "4.9.4",
+  "full_version": "EasyBuild/4.9.4",
+  "master_version": "3"
+},
+{
+  "name": "snphylo",
+  "version": "20180901",
+  "full_version": "snphylo/20180901",
+  "master_version": "3"
+},
+{
+  "name": "qiime2",
+  "version": "2024.10",
+  "full_version": "qiime2/2024.10",
+  "master_version": "3"
+},
+{
+  "name": "rmats",
+  "version": "4.3.0",
+  "full_version": "rmats/4.3.0",
+  "master_version": "3"
+},
+{
+  "name": "r-leafcutter",
+  "version": "0.2",
+  "full_version": "r-leafcutter/0.2",
+  "master_version": "3"
+},
+{
+  "name": "nthits",
+  "version": "1.0.3",
+  "full_version": "nthits/1.0.3",
+  "master_version": "3"
+},
+{
+  "name": "trimmomatic",
+  "version": "0.39",
+  "full_version": "trimmomatic/0.39",
+  "master_version": "3"
+},
+{
+  "name": "cpc2",
+  "version": "1.0.1",
+  "full_version": "cpc2/1.0.1",
+  "master_version": "3"
+},
+{
+  "name": "vg",
+  "version": "1.59.0",
+  "full_version": "vg/1.59.0",
+  "master_version": "3"
+},
+{
+  "name": "megahit",
+  "version": "1.2.9",
+  "full_version": "megahit/1.2.9",
+  "master_version": "3"
+},
+{
+  "name": "drop-seq",
+  "version": "3.0.2",
+  "full_version": "drop-seq/3.0.2",
+  "master_version": "3"
+},
+{
+  "name": "xpore",
+  "version": "2.1",
+  "full_version": "xpore/2.1",
+  "master_version": "3"
+},
+{
+  "name": "seqtk",
+  "version": "1.5",
+  "full_version": "seqtk/1.5",
+  "master_version": "3"
+},
+{
+  "name": "pfam_scan",
+  "version": "1.6",
+  "full_version": "pfam_scan/1.6",
+  "master_version": "3"
+},
+{
+  "name": "kent-tools",
+  "version": "472",
+  "full_version": "kent-tools/472",
+  "master_version": "3"
+},
+{
+  "name": "centrifuge",
+  "version": "1.0.4.2",
+  "full_version": "centrifuge/1.0.4.2",
+  "master_version": "3"
+},
+{
+  "name": "winsfs",
+  "version": "0.7.0",
+  "full_version": "winsfs/0.7.0",
+  "master_version": "3"
+},
+{
+  "name": "perl-logger-simple",
+  "version": "2.0",
+  "full_version": "perl-logger-simple/2.0",
+  "master_version": "3"
+},
+{
+  "name": "phyml",
+  "version": "3.3.20220408",
+  "full_version": "phyml/3.3.20220408",
+  "master_version": "3"
+},
+{
+  "name": "diamond",
+  "version": "2.1.11",
+  "full_version": "diamond/2.1.11",
+  "master_version": "3"
+},
+{
+  "name": "aaf",
+  "version": "1.0",
+  "full_version": "aaf/1.0",
+  "master_version": "3"
+},
+{
+  "name": "pandas",
+  "version": "2.2.3",
+  "full_version": "pandas/2.2.3",
+  "master_version": "3"
+},
+{
+  "name": "admixture",
+  "version": "1.3.0",
+  "full_version": "admixture/1.3.0",
+  "master_version": "3"
+},
+{
+  "name": "purge_dups",
+  "version": "1.2.6",
+  "full_version": "purge_dups/1.2.6",
+  "master_version": "3"
+},
+{
+  "name": "rovaca",
+  "version": "1.0.1",
+  "full_version": "rovaca/1.0.1",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-scds",
+  "version": "1.22.0",
+  "full_version": "bioconductor-scds/1.22.0",
+  "master_version": "3"
+},
+{
+  "name": "fastp",
+  "version": "0.24.0",
+  "full_version": "fastp/0.24.0",
+  "master_version": "3"
+},
+{
+  "name": "blast",
+  "version": "2.16.0",
+  "full_version": "blast/2.16.0",
+  "master_version": "3"
+},
+{
+  "name": "ont-modkit",
+  "version": "0.4.3",
+  "full_version": "ont-modkit/0.4.3",
+  "master_version": "3"
+},
+{
+  "name": "ont-modkit",
+  "version": "0.6.1",
+  "full_version": "ont-modkit/0.6.1",
+  "master_version": "3"
+},
+{
+  "name": "yacht",
+  "version": "1.3.0",
+  "full_version": "yacht/1.3.0",
+  "master_version": "3"
+},
+{
+  "name": "checkm2",
+  "version": "1.1.0",
+  "full_version": "checkm2/1.1.0",
+  "master_version": "3"
+},
+{
+  "name": "metabat2",
+  "version": "2.17",
+  "full_version": "metabat2/2.17",
+  "master_version": "3"
+},
+{
+  "name": "centrifuger",
+  "version": "1.0.12",
+  "full_version": "centrifuger/1.0.12",
+  "master_version": "3"
+},
+{
+  "name": "numpy",
+  "version": "2.2.2",
+  "full_version": "numpy/2.2.2",
+  "master_version": "3"
+},
+{
+  "name": "numpy",
+  "version": "2.1.1",
+  "full_version": "numpy/2.1.1",
+  "master_version": "3"
+},
+{
+  "name": "openjdk",
+  "version": "25.0.1",
+  "full_version": "openjdk/25.0.1",
+  "master_version": "3"
+},
+{
+  "name": "snp-sites",
+  "version": "2.5.1",
+  "full_version": "snp-sites/2.5.1",
+  "master_version": "3"
+},
+{
+  "name": "enrichm",
+  "version": "0.6.6",
+  "full_version": "enrichm/0.6.6",
+  "master_version": "3"
+},
+{
+  "name": "enrichm",
+  "version": "0.6.5",
+  "full_version": "enrichm/0.6.5",
+  "master_version": "3"
+},
+{
+  "name": "abba_baba",
+  "version": "1.0",
+  "full_version": "abba_baba/1.0",
+  "master_version": "3"
+},
+{
+  "name": "shapeit2",
+  "version": "2.r904",
+  "full_version": "shapeit2/2.r904",
+  "master_version": "3"
+},
+{
+  "name": "fastani",
+  "version": "1.34",
+  "full_version": "fastani/1.34",
+  "master_version": "3"
+},
+{
+  "name": "Mamba",
+  "version": "23.11.0-0",
+  "full_version": "Mamba/23.11.0-0",
+  "master_version": "3"
+},
+{
+  "name": "deeptools",
+  "version": "3.5.6",
+  "full_version": "deeptools/3.5.6",
+  "master_version": "3"
+},
+{
+  "name": "homer",
+  "version": "5.1",
+  "full_version": "homer/5.1",
+  "master_version": "3"
+},
+{
+  "name": "vibrant",
+  "version": "1.2.1",
+  "full_version": "vibrant/1.2.1",
+  "master_version": "3"
+},
+{
+  "name": "tophat",
+  "version": "2.1.1",
+  "full_version": "tophat/2.1.1",
+  "master_version": "3"
+},
+{
+  "name": "signalp6",
+  "version": "6.0g",
+  "full_version": "signalp6/6.0g",
+  "master_version": "3"
+},
+{
+  "name": "racon",
+  "version": "1.5.0",
+  "full_version": "racon/1.5.0",
+  "master_version": "3"
+},
+{
+  "name": "bakta",
+  "version": "1.12.0",
+  "full_version": "bakta/1.12.0",
+  "master_version": "3"
+},
+{
+  "name": "bakta",
+  "version": "1.11.0",
+  "full_version": "bakta/1.11.0",
+  "master_version": "3"
+},
+{
+  "name": "bakta",
+  "version": "1.10.4",
+  "full_version": "bakta/1.10.4",
+  "master_version": "3"
+},
+{
+  "name": "ragtag",
+  "version": "2.1.0",
+  "full_version": "ragtag/2.1.0",
+  "master_version": "3"
+},
+{
+  "name": "checkv",
+  "version": "1.0.3",
+  "full_version": "checkv/1.0.3",
+  "master_version": "3"
+},
+{
+  "name": "ncbi-genome-download",
+  "version": "0.3.3",
+  "full_version": "ncbi-genome-download/0.3.3",
+  "master_version": "3"
+},
+{
+  "name": "phyloFlash",
+  "version": "3.4.2",
+  "full_version": "phyloFlash/3.4.2",
+  "master_version": "3"
+},
+{
+  "name": "apalord",
+  "version": "1.0",
+  "full_version": "apalord/1.0",
+  "master_version": "3"
+},
+{
+  "name": "drep",
+  "version": "3.0.0-0",
+  "full_version": "drep/3.0.0-0",
+  "master_version": "3"
+},
+{
+  "name": "drep",
+  "version": "3.6.2",
+  "full_version": "drep/3.6.2",
+  "master_version": "3"
+},
+{
+  "name": "drep",
+  "version": "3.5.0",
+  "full_version": "drep/3.5.0",
+  "master_version": "3"
+},
+{
+  "name": "tagore",
+  "version": "1.1.2",
+  "full_version": "tagore/1.1.2",
+  "master_version": "3"
+},
+{
+  "name": "SynOrths",
+  "version": "1.0",
+  "full_version": "SynOrths/1.0",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-rtracklayer",
+  "version": "1.66.0",
+  "full_version": "bioconductor-rtracklayer/1.66.0",
+  "master_version": "3"
+},
+{
+  "name": "cobra",
+  "version": "0.21.0",
+  "full_version": "cobra/0.21.0",
+  "master_version": "3"
+},
+{
+  "name": "vcf2tajima",
+  "version": "1.0",
+  "full_version": "vcf2tajima/1.0",
+  "master_version": "3"
+},
+{
+  "name": "nextflow",
+  "version": "25.10.2",
+  "full_version": "nextflow/25.10.2",
+  "master_version": "3"
+},
+{
+  "name": "nextflow",
+  "version": "24.10.5",
+  "full_version": "nextflow/24.10.5",
+  "master_version": "3"
+},
+{
+  "name": "mash",
+  "version": "2.3",
+  "full_version": "mash/2.3",
+  "master_version": "3"
+},
+{
+  "name": "abricate",
+  "version": "1.0.1",
+  "full_version": "abricate/1.0.1",
+  "master_version": "3"
+},
+{
+  "name": "abricate",
+  "version": "1.2.0",
+  "full_version": "abricate/1.2.0",
+  "master_version": "3"
+},
+{
+  "name": "trim-galore",
+  "version": "0.6.10",
+  "full_version": "trim-galore/0.6.10",
+  "master_version": "3"
+},
+{
+  "name": "mirge3",
+  "version": "0.1.4",
+  "full_version": "mirge3/0.1.4",
+  "master_version": "3"
+},
+{
+  "name": "star",
+  "version": "2.7.11b",
+  "full_version": "star/2.7.11b",
+  "master_version": "3"
+},
+{
+  "name": "tidk",
+  "version": "0.2.65",
+  "full_version": "tidk/0.2.65",
+  "master_version": "3"
+},
+{
+  "name": "metaeuk",
+  "version": "6.a5d39d9",
+  "full_version": "metaeuk/6.a5d39d9",
+  "master_version": "3"
+},
+{
+  "name": "selscan",
+  "version": "2.0.3",
+  "full_version": "selscan/2.0.3",
+  "master_version": "3"
+},
+{
+  "name": "selscan",
+  "version": "2.1",
+  "full_version": "selscan/2.1",
+  "master_version": "3"
+},
+{
+  "name": "dram",
+  "version": "1.3.5",
+  "full_version": "dram/1.3.5",
+  "master_version": "3"
+},
+{
+  "name": "dram",
+  "version": "1.5.0",
+  "full_version": "dram/1.5.0",
+  "master_version": "3"
+},
+{
+  "name": "metagenome-atlas",
+  "version": "2.19.0",
+  "full_version": "metagenome-atlas/2.19.0",
+  "master_version": "3"
+},
+{
+  "name": "shapeit4",
+  "version": "4.2.2",
+  "full_version": "shapeit4/4.2.2",
+  "master_version": "3"
+},
+{
+  "name": "aster",
+  "version": "1.23",
+  "full_version": "aster/1.23",
+  "master_version": "3"
+},
+{
+  "name": "sift4g",
+  "version": "2.0.0",
+  "full_version": "sift4g/2.0.0",
+  "master_version": "3"
+},
+{
+  "name": "halla",
+  "version": "0.8.17",
+  "full_version": "halla/0.8.17",
+  "master_version": "3"
+},
+{
+  "name": "taxonkit",
+  "version": "0.20.0",
+  "full_version": "taxonkit/0.20.0",
+  "master_version": "3"
+},
+{
+  "name": "krona",
+  "version": "2.8.1",
+  "full_version": "krona/2.8.1",
+  "master_version": "3"
+},
+{
+  "name": "scvi-tools",
+  "version": "1.4.0",
+  "full_version": "scvi-tools/1.4.0",
+  "master_version": "3"
+},
+{
+  "name": "besst",
+  "version": "2.2.8",
+  "full_version": "besst/2.2.8",
+  "master_version": "3"
+},
+{
+  "name": "fastspar",
+  "version": "1.0.0",
+  "full_version": "fastspar/1.0.0",
+  "master_version": "3"
+},
+{
+  "name": "ncbi-fcs-gx",
+  "version": "0.5.5",
+  "full_version": "ncbi-fcs-gx/0.5.5",
+  "master_version": "3"
+},
+{
+  "name": "rclone",
+  "version": "1.69.1",
+  "full_version": "rclone/1.69.1",
+  "master_version": "3"
+},
+{
+  "name": "sspace",
+  "version": "2.1.1",
+  "full_version": "sspace/2.1.1",
+  "master_version": "3"
+},
+{
+  "name": "perl-hash-merge",
+  "version": "0.302",
+  "full_version": "perl-hash-merge/0.302",
+  "master_version": "3"
+},
+{
+  "name": "squeezemeta",
+  "version": "1.6.5.post1",
+  "full_version": "squeezemeta/1.6.5.post1",
+  "master_version": "3"
+},
+{
+  "name": "trimal",
+  "version": "1.5.0",
+  "full_version": "trimal/1.5.0",
+  "master_version": "3"
+},
+{
+  "name": "bcftools",
+  "version": "1.21",
+  "full_version": "bcftools/1.21",
+  "master_version": "3"
+},
+{
+  "name": "bcftools",
+  "version": "1.23",
+  "full_version": "bcftools/1.23",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-pairadise",
+  "version": "1.22.0",
+  "full_version": "bioconductor-pairadise/1.22.0",
+  "master_version": "3"
+},
+{
+  "name": "metaphlan",
+  "version": "4.1.1",
+  "full_version": "metaphlan/4.1.1",
+  "master_version": "3"
+},
+{
+  "name": "metaphlan",
+  "version": "4.2.2",
+  "full_version": "metaphlan/4.2.2",
+  "master_version": "3"
+},
+{
+  "name": "eukrep",
+  "version": "0.6.7",
+  "full_version": "eukrep/0.6.7",
+  "master_version": "3"
+},
+{
+  "name": "kaiju",
+  "version": "1.10.1",
+  "full_version": "kaiju/1.10.1",
+  "master_version": "3"
+},
+{
+  "name": "kneaddata",
+  "version": "0.12.4",
+  "full_version": "kneaddata/0.12.4",
+  "master_version": "3"
+},
+{
+  "name": "kneaddata",
+  "version": "0.12.2",
+  "full_version": "kneaddata/0.12.2",
+  "master_version": "3"
+},
+{
+  "name": "orthofinder",
+  "version": "3.1.0",
+  "full_version": "orthofinder/3.1.0",
+  "master_version": "3"
+},
+{
+  "name": "orthofinder",
+  "version": "3.0.1b1",
+  "full_version": "orthofinder/3.0.1b1",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-dada2",
+  "version": "1.34.0",
+  "full_version": "bioconductor-dada2/1.34.0",
+  "master_version": "3"
+},
+{
+  "name": "azcopy",
+  "version": "10.29.1",
+  "full_version": "azcopy/10.29.1",
+  "master_version": "3"
+},
+{
+  "name": "svim-asm",
+  "version": "1.0.3",
+  "full_version": "svim-asm/1.0.3",
+  "master_version": "3"
+},
+{
+  "name": "isoquant",
+  "version": "3.10.0",
+  "full_version": "isoquant/3.10.0",
+  "master_version": "3"
+},
+{
+  "name": "bioconductor-ballgown",
+  "version": "2.34.0",
+  "full_version": "bioconductor-ballgown/2.34.0",
+  "master_version": "3"
+},
+{
+  "name": "picrust2",
+  "version": "2.6.3",
+  "full_version": "picrust2/2.6.3",
+  "master_version": "3"
+},
+{
+  "name": "tmux",
+  "version": "3.5",
+  "full_version": "tmux/3.5",
+  "master_version": "3"
+},
+{
+  "name": "ancibd",
+  "version": "0.7",
+  "full_version": "ancibd/0.7",
+  "master_version": "3"
+},
+{
+  "name": "coverm",
+  "version": "0.7.0",
+  "full_version": "coverm/0.7.0",
+  "master_version": "3"
+},
+{
+  "name": "pilon",
+  "version": "1.24",
+  "full_version": "pilon/1.24",
+  "master_version": "3"
+},
+{
+  "name": "bbmap",
+  "version": "39.11",
+  "full_version": "bbmap/39.11",
+  "master_version": "3"
+},
+{
+  "name": "links",
+  "version": "2.0.1",
+  "full_version": "links/2.0.1",
+  "master_version": "3"
+},
+{
+  "name": "Gffcompare",
+  "version": "0.12.10",
+  "full_version": "Gffcompare/0.12.10",
+  "master_version": "3"
+},
+{
+  "name": "CNEFinder",
+  "version": "1.0",
+  "full_version": "CNEFinder/1.0",
+  "master_version": "3"
+},
+{
+  "name": "genemark_es",
+  "version": "4.71",
+  "full_version": "genemark_es/4.71",
+  "master_version": "3"
+},
+{
+  "name": "markdown",
+  "version": "3.6",
+  "full_version": "markdown/3.6",
+  "master_version": "3"
+},
+{
+  "name": "pggb",
+  "version": "0.7.4",
+  "full_version": "pggb/0.7.4",
+  "master_version": "3"
+},
+{
+  "name": "cafe",
+  "version": "5.1.0",
+  "full_version": "cafe/5.1.0",
+  "master_version": "3"
+},
+{
+  "name": "muscle",
+  "version": "5.3",
+  "full_version": "muscle/5.3",
+  "master_version": "3"
+}
+]

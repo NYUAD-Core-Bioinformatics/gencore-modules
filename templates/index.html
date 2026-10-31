@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block title %}Gencore Modules · Research software on Jubail{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="status-dot"></span> NYU Abu Dhabi · Jubail HPC</span>
+      <h1>Research software,<br><em>ready when you are.</em></h1>
+      <p>Find supported software modules, copy the exact load command, or request a package for the Gencore environment.</p>
+      <div class="hero-actions">
+        <a class="button button--primary" href="{{ url_for('browse_packages') }}">Browse modules <span aria-hidden="true">→</span></a>
+        <a class="button button--secondary" href="{{ url_for('howto') }}">Request software</a>
+      </div>
+      <div class="hero-stats" aria-label="Catalog statistics">
+        <div><strong>{{ package_count }}</strong><span>module builds</span></div>
+        <div><strong>{{ software_count }}</strong><span>software titles</span></div>
+        <div><strong>{{ generation_count }}</strong><span>Gencore generations</span></div>
+      </div>
+    </div>
+
+    <div class="terminal-card" aria-label="Example module commands">
+      <div class="terminal-bar">
+        <span></span><span></span><span></span>
+        <small>jubail-login</small>
+      </div>
+      <div class="terminal-body">
+        <p class="terminal-comment"># Search available Gencore software</p>
+        <p><span class="prompt">$</span> module avail gencore</p>
+        <p class="terminal-output">Gencore/1 &nbsp; Gencore/2 &nbsp; Gencore/3</p>
+        <p class="terminal-comment"># Load a reproducible environment</p>
+        <p><span class="prompt">$</span> module load all gencore/3</p>
+        <p><span class="prompt">$</span> module load samtools/1.22</p>
+        <p class="terminal-success">✓ Environment ready</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section intro-section" id="about">
+  <div class="shell intro-grid">
+    <div class="intro-heading">
+      <span class="eyebrow">About the platform</span>
+      <h2>Gencore Module Packaging System</h2>
+      <div class="intro-rule"></div>
+      <p class="intro-summary">A comprehensive bioinformatics software resource designed for researchers using the NYU Abu Dhabi High-Performance Computing cluster.</p>
+    </div>
+
+    <div class="intro-content">
+      <p>This website provides detailed information about genomics software modules available on Jubail, together with step-by-step instructions for loading them efficiently. Explore the software versions currently supported for each module and select the version that is compatible with your project.</p>
+      <p>You can also request the installation of new software to meet specific research requirements. Private meta-modules can combine two or more existing modules into a single, unified environment for more streamlined and reproducible workflows.</p>
+
+      <div class="resource-grid" aria-label="Gencore resources">
+        <a class="resource-link" href="https://crc-docs.abudhabi.nyu.edu/" rel="noopener">
+          <span class="resource-icon" aria-hidden="true">↗</span>
+          <span><small>HPC support</small><strong>CRC documentation</strong></span>
+          <span class="row-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="resource-link" href="https://cgsb.abudhabi.nyu.edu/" rel="noopener">
+          <span class="resource-icon" aria-hidden="true">◎</span>
+          <span><small>About the team</small><strong>Core Bioinformatics</strong></span>
+          <span class="row-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="resource-link" href="https://github.com/NYUAD-Core-Bioinformatics/" rel="noopener">
+          <span class="resource-icon" aria-hidden="true">&lt;/&gt;</span>
+          <span><small>Open-source tools</small><strong>GitHub projects</strong></span>
+          <span class="row-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="resource-link" href="mailto:nyuad.cgsb.cb@nyu.edu">
+          <span class="resource-icon" aria-hidden="true">@</span>
+          <span><small>Questions and support</small><strong>Contact us</strong></span>
+          <span class="row-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted">
+  <div class="shell">
+    <div class="section-heading">
+      <div><span class="eyebrow">One clear path</span><h2>From search to science</h2></div>
+      <p>Use an existing module in seconds. If it is missing, send a request to the Core Bioinformatics team.</p>
+    </div>
+    <div class="step-grid">
+      <article class="step-card">
+        <span class="step-number">01</span><div class="step-icon" aria-hidden="true">⌕</div>
+        <h3>Discover</h3><p>Search the catalog by software name and compare available versions.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-number">02</span><div class="step-icon" aria-hidden="true">›_</div>
+        <h3>Load</h3><p>Copy the generated module commands directly into your Jubail session.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-number">03</span><div class="step-icon" aria-hidden="true">＋</div>
+        <h3>Request</h3><p>Ask for missing software and receive progress updates by email.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell callout">
+    <div><span class="eyebrow">Need something new?</span><h2>Help us extend the catalog.</h2></div>
+    <p>Requests available through Bioconda or conda-forge will be eligible for the automated build workflow.</p>
+    <a class="button button--light" href="{{ url_for('howto') }}">Start a request <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+{% endblock %}

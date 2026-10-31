@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block title %}Request software · Gencore Modules{% endblock %}
+
+{% block content %}
+<section class="request-hero">
+  <div class="shell request-heading">
+    <div><span class="eyebrow">Software request</span><h1>Bring a new tool to Jubail.</h1></div>
+    <p>Tell us what you need. Packages available through Bioconda or conda-forge can enter the automated build workflow; other software is reviewed by the team.</p>
+  </div>
+</section>
+
+<section class="request-section">
+  <div class="shell request-grid">
+    <aside class="request-aside">
+      <h2>What happens next?</h2>
+      <ol class="timeline">
+        <li><span>1</span><div><strong>Availability check</strong><p>We check the approved Conda channels for the exact package and version.</p></div></li>
+        <li><span>2</span><div><strong>Build or review</strong><p>Eligible packages are queued automatically. Everything else is routed to an administrator.</p></div></li>
+        <li><span>3</span><div><strong>Email update</strong><p>We notify you when the module is ready or when the team needs more information.</p></div></li>
+      </ol>
+      <div class="notice-card"><span aria-hidden="true">i</span><p>Before requesting, <a href="{{ url_for('browse_packages') }}">search the module catalog</a> to avoid duplicate builds.</p></div>
+    </aside>
+
+    <div class="form-card">
+      <div class="form-heading"><span class="eyebrow">Request details</span><h2>Software information</h2><p>Fields marked with <span class="required">*</span> are required.</p></div>
+      <form method="post" id="request-form" novalidate>
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="form-grid">
+            <div class="field">
+              {{ form.name.label }} <span class="required">*</span>
+              {{ form.name(class_='form-control', autocomplete='name', required=True) }}
+              {% for error in form.name.errors %}<small class="field-error">{{ error }}</small>{% endfor %}
+            </div>
+            <div class="field">
+              {{ form.email.label }} <span class="required">*</span>
+              {{ form.email(class_='form-control', autocomplete='email', inputmode='email', required=True) }}
+              {% for error in form.email.errors %}<small class="field-error">{{ error }}</small>{% endfor %}
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Package details</legend>
+          <div class="form-grid">
+            <div class="field">
+              {{ form.soft_name.label }} <span class="required">*</span>
+              {{ form.soft_name(class_='form-control', autocomplete='off', required=True) }}
+              <small>Use the exact package name when possible.</small>
+              {% for error in form.soft_name.errors %}<small class="field-error">{{ error }}</small>{% endfor %}
+            </div>
+            <div class="field">
+              {{ form.soft_version.label }} <span class="optional-label">Optional</span>
+              {{ form.soft_version(class_='form-control', autocomplete='off') }}
+              <small>If left blank, the latest available version will be requested.</small>
+              {% for error in form.soft_version.errors %}<small class="field-error">{{ error }}</small>{% endfor %}
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Source links <span>Optional</span></legend>
+          <div class="field">
+            {{ form.conda_url.label }}
+            {{ form.conda_url(class_='form-control', type='url', placeholder='https://anaconda.org/bioconda/package-name') }}
+            <small>Bioconda or conda-forge links are preferred.</small>
+          </div>
+          <div class="field">
+            {{ form.github_url.label }}
+            {{ form.github_url(class_='form-control', type='url', placeholder='https://github.com/organization/project') }}
+          </div>
+          <div class="field">
+            {{ form.database_url.label }}
+            {{ form.database_url(class_='form-control', type='url', placeholder='https://example.org/database/download') }}
+            <small>Include a direct database or reference-data download page when the software requires one.</small>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <p>By submitting, you agree to receive email updates about this request.</p>
+          <button class="button button--primary button--submit" type="submit">Submit request <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const requestForm = document.getElementById('request-form');
+  if (requestForm) {
+    requestForm.addEventListener('submit', () => {
+      const button = requestForm.querySelector('[type="submit"]');
+      button.disabled = true;
+      button.textContent = 'Submitting…';
+    });
+  }
+</script>
+{% endblock %}
