@@ -103,7 +103,6 @@ WEB_THREADS=4
 TZ=Asia/Dubai
 
 APP_DOMAIN=gencore-modules.abudhabi.nyu.edu
-APP_SERVER_IP=10.230.14.42
 HTTPS_PORT=443
 TLS_CERT_ON_HOST=./secrets/gencore-modules.crt
 TLS_KEY_ON_HOST=./secrets/gencore-modules.key
