@@ -9,7 +9,6 @@ services:
         condition: service_started
     environment:
       TZ: ${TZ:-Asia/Dubai}
-    extra_hosts: *local-domain
     networks:
       - edge
     ports:
@@ -79,7 +78,6 @@ services:
         --timeout=60
         --access-logfile=-
         --error-logfile=-
-    extra_hosts: *local-domain
     networks:
       - default
       - edge
@@ -111,7 +109,6 @@ services:
       - .env
     environment:
       TZ: ${TZ:-Asia/Dubai}
-    extra_hosts: *local-domain
     depends_on:
       redis:
         condition: service_healthy
