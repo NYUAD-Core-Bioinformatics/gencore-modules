@@ -51,6 +51,7 @@ app.config['MAIL_PASSWORD'] = required_env('MAIL_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = required_env('MAIL_DEFAULT_SENDER')
 app.config['MAIL_SENDER_NAME'] = required_env('MAIL_SENDER_NAME')
 app.config['SUPPORT_EMAIL'] = required_env('SUPPORT_EMAIL')
+app.config['APP_DOMAIN'] = required_env('APP_DOMAIN')
 
 if app.config['MAIL_USE_TLS'] and app.config['MAIL_USE_SSL']:
     raise RuntimeError('MAIL_USE_TLS and MAIL_USE_SSL cannot both be true')

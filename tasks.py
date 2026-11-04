@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 from typing import Any
+from urllib.parse import quote
 
 from celery import Celery
 from celery.signals import worker_process_init, worker_ready
@@ -58,6 +59,16 @@ ACTIVE_SLURM_STATES = {
 
 def notification_sender() -> tuple[str, str]:
     return app.config["MAIL_SENDER_NAME"], app.config["MAIL_DEFAULT_SENDER"]
+
+
+def module_page_url(package_name: str, package_version: str) -> str:
+    """Return the public Gencore 3 module page for an installed package."""
+    encoded_name = quote(package_name, safe="")
+    encoded_version = quote(package_version, safe="")
+    return (
+        f"https://{app.config['APP_DOMAIN']}"
+        f"/package/{encoded_name}/{encoded_version}/3"
+    )
 
 
 def update_request(request_id: str, **values: Any) -> PackageRequest:
@@ -213,6 +224,10 @@ The software was not submitted to Slurm automatically.
 )
 def notify_build_queued(self, request_id: str) -> None:
     package_request = load_request(request_id)
+    package_url = module_page_url(
+        package_request.package_name,
+        str(package_request.resolved_version),
+    )
     send_final_message(
         package_request,
         f"Your Package Request for {package_request.package_name} Was Accepted",
@@ -229,6 +244,13 @@ Slurm Job ID     : {package_request.slurm_job_id}
 
 We will send another email when the installation completes or requires
 administrator attention.
+
+If you do not receive the completion email, you can check the module page later:
+
+{package_url}
+
+The module page will become available only after the installation completes
+successfully and the Gencore catalog has been updated.
 
 Feel free to reach out to {app.config['SUPPORT_EMAIL']} for any queries.
 
@@ -292,6 +314,49 @@ NYU Abu Dhabi Core Bioinformatics
 """,
         notify_admin=True,
     )
+
+
+@celery.task(
+    bind=True,
+    autoretry_for=(Exception,),
+    retry_backoff=True,
+    retry_backoff_max=60,
+    retry_kwargs={"max_retries": 3},
+)
+def notify_monitoring_unavailable_admin(self, request_id: str) -> None:
+    """Notify support when Jubail monitoring is unavailable for too long."""
+    package_request = load_request(request_id)
+    retry_interval = int(os.getenv("HPC_MONITOR_RETRY_INTERVAL", "1800"))
+    retries_before_alert = int(
+        os.getenv("HPC_MONITOR_RETRIES_BEFORE_ALERT", "3")
+    )
+    elapsed_minutes = retry_interval * retries_before_alert // 60
+    message = Message(
+        subject=(
+            "Jubail Monitoring Requires Attention: "
+            f"{package_request.package_name}/{package_request.resolved_version}"
+        ),
+        sender=notification_sender(),
+        recipients=[app.config["SUPPORT_EMAIL"]],
+        reply_to=package_request.requester_email,
+    )
+    message.body = f"""Automated monitoring has been unable to connect to Jubail
+after {retries_before_alert} retries over approximately {elapsed_minutes} minutes.
+
+The Slurm job has not been resubmitted and may still be running or may already
+have completed. Automated monitoring will continue every
+{retry_interval // 60} minutes while administrator attention is requested.
+
+Request ID      : {request_id}
+Requester       : {package_request.requester_name}
+Requester Email : {package_request.requester_email}
+Software        : {package_request.package_name}
+Version         : {package_request.resolved_version or package_request.requested_version}
+Slurm Job ID    : {package_request.slurm_job_id or 'Not available'}
+Last Error      : {package_request.status_detail or 'Jubail monitoring unavailable'}
+"""
+    with app.app_context():
+        mail.send(message)
 
 
 @celery.task(
@@ -462,7 +527,7 @@ def monitor_slurm_job(self, request_id: str) -> str:
                 )
                 monitor_slurm_job.apply_async(
                     args=[request_id],
-                    countdown=int(os.getenv("HPC_POLL_INTERVAL", "60")),
+                    countdown=int(os.getenv("HPC_POLL_INTERVAL", "600")),
                 )
                 return state
 
@@ -506,9 +571,34 @@ def monitor_slurm_job(self, request_id: str) -> str:
             notify_build_failure.delay(request_id)
             return "FAILED"
     except (HPCError, OSError, ValueError, json.JSONDecodeError) as error:
-        update_request(request_id, status_detail=f"HPC monitoring retry: {error}")
-        delay = min(1800, 30 * (2 ** min(self.request.retries, 6)))
-        raise self.retry(exc=error, countdown=delay, max_retries=None)
+        retry_interval = int(os.getenv("HPC_MONITOR_RETRY_INTERVAL", "1800"))
+        retries_before_alert = int(
+            os.getenv("HPC_MONITOR_RETRIES_BEFORE_ALERT", "3")
+        )
+        detail = f"HPC monitoring retry: {error}"
+
+        # Celery starts with retries=0. Alert after the initial failure plus
+        # the configured number of failed retries: t=0, 30, 60 and 90 minutes
+        # with the default settings. Keep retrying after the alert because the
+        # remote Slurm job may still complete successfully.
+        if (
+            self.request.retries >= retries_before_alert
+            and package_request.status != "MONITORING_ATTENTION"
+        ):
+            update_request(
+                request_id,
+                status="MONITORING_ATTENTION",
+                status_detail=detail,
+            )
+            notify_monitoring_unavailable_admin.delay(request_id)
+        else:
+            update_request(request_id, status_detail=detail)
+
+        raise self.retry(
+            exc=error,
+            countdown=retry_interval,
+            max_retries=None,
+        )
 
 
 @worker_ready.connect

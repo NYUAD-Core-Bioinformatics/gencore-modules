@@ -50,11 +50,13 @@ remain on private Compose networks.
    job is submitted.
 5. Eligible packages are uploaded through SFTP and submitted through an
    idempotent wrapper on Jubail.
-6. Celery schedules short `sacct` checks until the Slurm job reaches a terminal
+6. The accepted-request email includes the future Gencore 3 module-page URL.
+   That URL becomes available only after installation and catalog publication.
+7. Celery schedules short `sacct` checks until the Slurm job reaches a terminal
    state. A worker is not held open while the build runs.
-7. After a successful build, Jubail regenerates the catalog. The worker
+8. After a successful build, Jubail regenerates the catalog. The worker
    downloads, validates, and atomically publishes the new file.
-8. The requester receives loading instructions, or a failure notice when
+9. The requester receives loading instructions, or a failure notice when
    administrator attention is required.
 
 There is no Celery Beat service and no continuous catalog polling. On worker
@@ -215,14 +217,39 @@ HPC_USERNAME=gencore
 HPC_SSH_KEY_ON_HOST=./secrets/hpc_ssh_key
 HPC_SSH_KEY_PATH=/run/secrets/hpc_ssh_key
 HPC_AUTOMATION_ROOT=/scratch/gencore/GencoreModule_automate
-HPC_CONNECT_TIMEOUT=10
+HPC_CONNECT_TIMEOUT=30
 HPC_COMMAND_TIMEOUT=180
-HPC_POLL_INTERVAL=300
+HPC_POLL_INTERVAL=600
+HPC_MONITOR_RETRY_INTERVAL=1800
+HPC_MONITOR_RETRIES_BEFORE_ALERT=3
 HPC_KNOWN_HOSTS=
 HPC_ALLOW_UNKNOWN_HOST_KEY=true
 
 CATALOG_PATH=/app/catalog/packages.json
 ```
+
+`HPC_POLL_INTERVAL` controls normal Slurm polling after a successful SSH
+connection. With the value above, active jobs are checked every 10 minutes.
+This interval does not control connectivity-error retries.
+
+When an SSH, SFTP, Slurm-query, or catalog-synchronization attempt fails, the
+worker waits `HPC_MONITOR_RETRY_INTERVAL` seconds and tries the existing job
+again. With three configured retries, the timeline is:
+
+```text
+Initial monitoring failure     0 minutes
+First retry                   30 minutes
+Second retry                  60 minutes
+Third retry                   90 minutes
+Administrator notification   after the third retry fails
+```
+
+After the third failed retry, the request enters `MONITORING_ATTENTION` and an
+administrator message is sent to `SUPPORT_EMAIL`. The requester is not notified
+because the remote build status is still unknown. Monitoring continues every
+30 minutes, retains the original Slurm job ID, and never submits a replacement
+job. When connectivity returns, the normal running, completion, catalog-sync,
+and requester-notification workflow resumes automatically.
 
 Store the private key outside Git and make it readable by the worker's
 UID/GID `10001`:
@@ -368,7 +395,7 @@ docker compose logs -f worker
 docker compose logs -f proxy oauth2-proxy web worker postgres redis
 docker compose logs --since=30m worker
 docker compose logs --since=30m worker | \
-  grep -E 'notify_build_success|notify_build_failure|retry|ERROR'
+  grep -E 'notify_build_success|notify_build_failure|notify_monitoring_unavailable_admin|retry|ERROR'
 ```
 
 Compose rotates JSON logs at 10 MB and retains three files per service.
@@ -402,7 +429,8 @@ https://gencore-modules.abudhabi.nyu.edu/requests/<request-uuid>
 ```
 
 Relevant states include `RECEIVED`, `VALIDATING`, `SUBMITTED`, `PENDING`,
-`RUNNING`, `ALREADY_AVAILABLE`, `MANUAL_REVIEW`, `COMPLETED`, and `FAILED`.
+`RUNNING`, `CATALOG_SYNC_PENDING`, `MONITORING_ATTENTION`,
+`ALREADY_AVAILABLE`, `MANUAL_REVIEW`, `COMPLETED`, and `FAILED`.
 
 ### Catalog publication
 
@@ -440,7 +468,7 @@ procedures before relying on backups.
 ### Application fails at startup
 
 Run `docker compose config` and inspect the service logs. Missing required SMTP
-or administrator variables produce an explicit `Required environment variable
+or notification variables produce an explicit `Required environment variable
 ... is not set` error.
 
 ### No notification email
@@ -478,6 +506,44 @@ Remote output and error files are stored under:
 
 ```text
 /scratch/gencore/GencoreModule_automate/requests/<request-uuid>/logs/
+```
+
+### Jubail SSH monitoring remains unavailable
+
+An SSH banner timeout or connection reset does not resubmit the Slurm job. The
+worker keeps its existing job ID, retries every 30 minutes, and emails
+`SUPPORT_EMAIL` after three retries fail. Confirm the effective settings:
+
+```bash
+docker compose exec worker sh -c '
+echo "HPC_CONNECT_TIMEOUT=$HPC_CONNECT_TIMEOUT"
+echo "HPC_POLL_INTERVAL=$HPC_POLL_INTERVAL"
+echo "HPC_MONITOR_RETRY_INTERVAL=$HPC_MONITOR_RETRY_INTERVAL"
+echo "HPC_MONITOR_RETRIES_BEFORE_ALERT=$HPC_MONITOR_RETRIES_BEFORE_ALERT"
+'
+```
+
+Inspect requests requiring attention:
+
+```bash
+docker compose exec postgres sh -lc '
+psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -x -c "
+SELECT request_id, package_name, resolved_version, slurm_job_id,
+       status, status_detail, updated_at
+FROM package_requests
+WHERE status = '\''MONITORING_ATTENTION'\''
+ORDER BY updated_at;
+"'
+```
+
+After confirming that no monitor for the request is already active, reserved,
+or scheduled, an administrator can resume one request without resubmitting its
+Slurm job:
+
+```bash
+docker compose exec worker \
+  celery -A tasks:celery call tasks.monitor_slurm_job \
+  --args='["<request-uuid>"]'
 ```
 
 ### Catalog download permission denied
