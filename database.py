@@ -6,7 +6,16 @@ import os
 from datetime import datetime, timezone
 from typing import Optional
 
-from sqlalchemy import Boolean, DateTime, String, Text, create_engine, select, text
+from sqlalchemy import (
+    Boolean,
+    DateTime,
+    String,
+    Text,
+    create_engine,
+    select,
+    text,
+    update,
+)
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
 
@@ -38,6 +47,11 @@ class PackageRequest(Base):
     status_detail: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     result_json: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     final_notification_sent: Mapped[bool] = mapped_column(Boolean, default=False)
+    monitoring_alert_sent: Mapped[bool] = mapped_column(
+        Boolean,
+        default=False,
+        server_default=text("false"),
+    )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
@@ -71,6 +85,70 @@ def init_database() -> None:
             )
         Base.metadata.create_all(connection)
 
+        # create_all does not add columns to an existing table. Keep this
+        # small migration here until the project adopts a migration tool.
+        # Existing MONITORING_ATTENTION rows have already generated an alert,
+        # so backfill them as sent when the column is first introduced.
+        if engine.dialect.name == "postgresql":
+            column_exists = connection.execute(
+                text(
+                    """
+                    SELECT EXISTS (
+                        SELECT 1
+                        FROM information_schema.columns
+                        WHERE table_schema = current_schema()
+                          AND table_name = 'package_requests'
+                          AND column_name = 'monitoring_alert_sent'
+                    )
+                    """
+                )
+            ).scalar_one()
+            if not column_exists:
+                connection.execute(
+                    text(
+                        """
+                        ALTER TABLE package_requests
+                        ADD COLUMN monitoring_alert_sent BOOLEAN
+                        NOT NULL DEFAULT FALSE
+                        """
+                    )
+                )
+                connection.execute(
+                    text(
+                        """
+                        UPDATE package_requests
+                        SET monitoring_alert_sent = TRUE
+                        WHERE status = 'MONITORING_ATTENTION'
+                        """
+                    )
+                )
+        elif engine.dialect.name == "sqlite":
+            columns = {
+                row[1]
+                for row in connection.execute(
+                    text("PRAGMA table_info(package_requests)")
+                )
+            }
+            if "monitoring_alert_sent" not in columns:
+                connection.execute(
+                    text(
+                        """
+                        ALTER TABLE package_requests
+                        ADD COLUMN monitoring_alert_sent BOOLEAN
+                        NOT NULL DEFAULT 0
+                        """
+                    )
+                )
+                connection.execute(
+                    text(
+                        """
+                        UPDATE package_requests
+                        SET monitoring_alert_sent = 1
+                        WHERE status = 'MONITORING_ATTENTION'
+                        """
+                    )
+                )
+
 
 def reset_database_connections_after_fork() -> None:
     """Drop connections inherited from a pre-fork Celery parent process."""
@@ -80,6 +158,30 @@ def reset_database_connections_after_fork() -> None:
 def get_request(request_id: str) -> PackageRequest | None:
     with Session() as session:
         return session.get(PackageRequest, request_id)
+
+
+def claim_monitoring_alert(request_id: str) -> bool:
+    """Atomically claim the one monitoring alert allowed for a request."""
+    with Session.begin() as session:
+        result = session.execute(
+            update(PackageRequest)
+            .where(
+                PackageRequest.request_id == request_id,
+                PackageRequest.monitoring_alert_sent.is_(False),
+            )
+            .values(monitoring_alert_sent=True)
+        )
+        return result.rowcount == 1
+
+
+def release_monitoring_alert(request_id: str) -> None:
+    """Release a claim when SMTP fails so Celery can retry the alert."""
+    with Session.begin() as session:
+        session.execute(
+            update(PackageRequest)
+            .where(PackageRequest.request_id == request_id)
+            .values(monitoring_alert_sent=False)
+        )
 
 
 def unfinished_request_ids() -> list[tuple[str, str | None]]:

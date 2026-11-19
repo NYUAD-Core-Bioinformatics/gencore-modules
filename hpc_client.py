@@ -46,7 +46,7 @@ class HPCClient:
                 "/scratch/gencore/GencoreModule_automate",
             )
         )
-        self.connect_timeout = int(os.getenv("HPC_CONNECT_TIMEOUT", "10"))
+        self.connect_timeout = int(os.getenv("HPC_CONNECT_TIMEOUT", "30"))
         self.command_timeout = int(os.getenv("HPC_COMMAND_TIMEOUT", "60"))
 
     @contextmanager
