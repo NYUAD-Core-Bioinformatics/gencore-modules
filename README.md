@@ -219,7 +219,7 @@ HPC_SSH_KEY_PATH=/run/secrets/hpc_ssh_key
 HPC_AUTOMATION_ROOT=/scratch/gencore/GencoreModule_automate
 HPC_CONNECT_TIMEOUT=30
 HPC_COMMAND_TIMEOUT=180
-HPC_POLL_INTERVAL=600
+HPC_POLL_INTERVAL=1800
 HPC_MONITOR_RETRY_INTERVAL=1800
 HPC_MONITOR_RETRIES_BEFORE_ALERT=3
 HPC_KNOWN_HOSTS=
@@ -229,8 +229,14 @@ CATALOG_PATH=/app/catalog/packages.json
 ```
 
 `HPC_POLL_INTERVAL` controls normal Slurm polling after a successful SSH
-connection. With the value above, active jobs are checked every 10 minutes.
+connection. With the value above, active jobs are checked every 30 minutes.
 This interval does not control connectivity-error retries.
+
+Each request also stores a durable `next_monitor_at` value in PostgreSQL.
+Before opening SSH, a monitor task must atomically claim the current polling
+window. If recovery or an older Redis message creates duplicate Celery tasks,
+only one task contacts Jubail; the others return `POLL_SKIPPED`. This prevents
+multiple monitoring chains from producing rapid SSH/SFTP connection bursts.
 
 When an SSH, SFTP, Slurm-query, or catalog-synchronization attempt fails, the
 worker waits `HPC_MONITOR_RETRY_INTERVAL` seconds and tries the existing job
@@ -259,9 +265,10 @@ alerted so deployment does not resend their notification.
 
 When upgrading an existing installation to this schema, stop the worker before
 rebuilding. The web or worker startup migration adds the
-`monitoring_alert_sent` column automatically; no manual SQL migration is
-required. Duplicate alert tasks already stored in Redis return `ALREADY_SENT`
-without contacting SMTP.
+`monitoring_alert_sent` and `next_monitor_at` columns automatically; no manual
+SQL migration is required. Duplicate alert tasks already stored in Redis return
+`ALREADY_SENT` without contacting SMTP, and duplicate monitor tasks return
+`POLL_SKIPPED` without contacting Jubail.
 
 The automatic backfill marks requests that are still in
 `MONITORING_ATTENTION`. If an already-alerted request recovered to `RUNNING`

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 from sqlalchemy import (
@@ -51,6 +51,10 @@ class PackageRequest(Base):
         Boolean,
         default=False,
         server_default=text("false"),
+    )
+    next_monitor_at: Mapped[Optional[datetime]] = mapped_column(
+        DateTime(timezone=True),
+        nullable=True,
     )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
@@ -122,6 +126,29 @@ def init_database() -> None:
                         """
                     )
                 )
+
+            next_monitor_column_exists = connection.execute(
+                text(
+                    """
+                    SELECT EXISTS (
+                        SELECT 1
+                        FROM information_schema.columns
+                        WHERE table_schema = current_schema()
+                          AND table_name = 'package_requests'
+                          AND column_name = 'next_monitor_at'
+                    )
+                    """
+                )
+            ).scalar_one()
+            if not next_monitor_column_exists:
+                connection.execute(
+                    text(
+                        """
+                        ALTER TABLE package_requests
+                        ADD COLUMN next_monitor_at TIMESTAMP WITH TIME ZONE NULL
+                        """
+                    )
+                )
         elif engine.dialect.name == "sqlite":
             columns = {
                 row[1]
@@ -145,6 +172,15 @@ def init_database() -> None:
                         UPDATE package_requests
                         SET monitoring_alert_sent = 1
                         WHERE status = 'MONITORING_ATTENTION'
+                        """
+                    )
+                )
+            if "next_monitor_at" not in columns:
+                connection.execute(
+                    text(
+                        """
+                        ALTER TABLE package_requests
+                        ADD COLUMN next_monitor_at DATETIME NULL
                         """
                     )
                 )
@@ -184,12 +220,44 @@ def release_monitoring_alert(request_id: str) -> None:
         )
 
 
-def unfinished_request_ids() -> list[tuple[str, str | None]]:
+def claim_monitor_poll(request_id: str, interval_seconds: int) -> bool:
+    """Atomically allow one HPC poll for a request during an interval."""
+    now = datetime.now(timezone.utc)
+    next_monitor_at = now + timedelta(seconds=interval_seconds)
+    with Session.begin() as session:
+        result = session.execute(
+            update(PackageRequest)
+            .where(
+                PackageRequest.request_id == request_id,
+                (
+                    PackageRequest.next_monitor_at.is_(None)
+                    | (PackageRequest.next_monitor_at <= now)
+                ),
+            )
+            .values(next_monitor_at=next_monitor_at)
+        )
+        return result.rowcount == 1
+
+
+def defer_monitor_poll(request_id: str, delay_seconds: int) -> None:
+    """Prevent duplicate monitors from polling before a retry is due."""
+    next_monitor_at = datetime.now(timezone.utc) + timedelta(seconds=delay_seconds)
+    with Session.begin() as session:
+        session.execute(
+            update(PackageRequest)
+            .where(PackageRequest.request_id == request_id)
+            .values(next_monitor_at=next_monitor_at)
+        )
+
+
+def unfinished_request_ids() -> list[tuple[str, str | None, datetime | None]]:
     terminal = {"ALREADY_AVAILABLE", "MANUAL_REVIEW", "COMPLETED", "FAILED"}
     with Session() as session:
         rows = session.execute(
-            select(PackageRequest.request_id, PackageRequest.slurm_job_id).where(
-                PackageRequest.status.not_in(terminal)
-            )
+            select(
+                PackageRequest.request_id,
+                PackageRequest.slurm_job_id,
+                PackageRequest.next_monitor_at,
+            ).where(PackageRequest.status.not_in(terminal))
         )
         return list(rows.tuples())

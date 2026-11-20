@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+from datetime import datetime, timezone
 from typing import Any
 from urllib.parse import quote
 
@@ -22,7 +23,9 @@ from conda_registry import RegistryUnavailable, resolve_conda_package
 from database import (
     PackageRequest,
     Session,
+    claim_monitor_poll,
     claim_monitoring_alert,
+    defer_monitor_poll,
     init_database,
     release_monitoring_alert,
     reset_database_connections_after_fork,
@@ -522,6 +525,10 @@ def monitor_slurm_job(self, request_id: str) -> str:
         process_package_request.delay(request_id)
         return "SUBMISSION_QUEUED"
 
+    poll_interval = int(os.getenv("HPC_POLL_INTERVAL", "1800"))
+    if not claim_monitor_poll(request_id, poll_interval):
+        return "POLL_SKIPPED"
+
     hpc = HPCClient()
     try:
         with hpc.connect() as client:
@@ -540,7 +547,7 @@ def monitor_slurm_job(self, request_id: str) -> str:
                 )
                 monitor_slurm_job.apply_async(
                     args=[request_id],
-                    countdown=int(os.getenv("HPC_POLL_INTERVAL", "600")),
+                    countdown=poll_interval,
                 )
                 return state
 
@@ -585,6 +592,7 @@ def monitor_slurm_job(self, request_id: str) -> str:
             return "FAILED"
     except (HPCError, OSError, ValueError, json.JSONDecodeError) as error:
         retry_interval = int(os.getenv("HPC_MONITOR_RETRY_INTERVAL", "1800"))
+        defer_monitor_poll(request_id, retry_interval)
         retries_before_alert = int(
             os.getenv("HPC_MONITOR_RETRIES_BEFORE_ALERT", "3")
         )
@@ -619,9 +627,15 @@ def recover_unfinished_requests(**_: Any) -> None:
     if not env_flag("HPC_RECOVERY_ENABLED", False):
         return
     init_database()
-    for request_id, job_id in unfinished_request_ids():
+    now = datetime.now(timezone.utc)
+    for request_id, job_id, next_monitor_at in unfinished_request_ids():
         if job_id:
-            monitor_slurm_job.delay(request_id)
+            countdown = 0
+            if next_monitor_at is not None:
+                if next_monitor_at.tzinfo is None:
+                    next_monitor_at = next_monitor_at.replace(tzinfo=timezone.utc)
+                countdown = max(0, int((next_monitor_at - now).total_seconds()))
+            monitor_slurm_job.apply_async(args=[request_id], countdown=countdown)
         else:
             process_package_request.delay(request_id)
 
